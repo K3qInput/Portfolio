@@ -19,6 +19,14 @@ Preferred communication style: Simple, everyday language.
 - **Added PostgreSQL database integration** - Replaced in-memory storage with persistent database storage
 - Created database connection with Neon PostgreSQL
 - Migrated all data operations to use Drizzle ORM with proper schema
+- **Enhanced Skills Section** - Added comprehensive animated pie chart showing skill distribution
+- Organized skills into Programming Languages, Backend & Tools, and Specializations
+- Added extensive programming languages (HTML, CSS, C++, etc.) and backend technologies
+- **Updated Contact Information** - Changed to kirodev.java@gmail.com and kiro.java Discord
+- Removed contact form, simplified to contact information display only
+- **Added Educational Background** - Network Architecture (2nd Year), Diploma in Cyber Law
+- Added personal information (Age: 22) and languages (English, French, Hindi)
+- Cleaned up hero section by removing coding languages display
 
 ## System Architecture
 

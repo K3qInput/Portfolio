@@ -45,33 +45,65 @@ export default function About() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-3 gap-8">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
+            className="glass-effect p-8 rounded-2xl"
           >
-            <div className="glass-effect p-8 rounded-2xl">
-              <h3 className="text-2xl font-bold text-green-primary mb-6">My Specializations</h3>
-              <div className="space-y-4">
-                {specializations.map((spec, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 }}
-                    className="flex items-start space-x-4"
-                  >
-                    <div className="bg-green-primary/20 p-3 rounded-full flex-shrink-0">
-                      <spec.icon className="w-6 h-6 text-green-primary" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-slate-300 mb-1">{spec.title}</h4>
-                      <p className="text-sm text-slate-400">{spec.description}</p>
-                    </div>
-                  </motion.div>
-                ))}
+            <h3 className="text-2xl font-bold text-green-primary mb-6">My Specializations</h3>
+            <div className="space-y-4">
+              {specializations.map((spec, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="flex items-start space-x-4"
+                >
+                  <div className="bg-green-primary/20 p-3 rounded-full flex-shrink-0">
+                    <spec.icon className="w-6 h-6 text-green-primary" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-slate-300 mb-1">{spec.title}</h4>
+                    <p className="text-sm text-slate-400">{spec.description}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="glass-effect p-8 rounded-2xl"
+          >
+            <h3 className="text-2xl font-bold text-green-primary mb-6">Education & Background</h3>
+            <div className="space-y-6">
+              <div>
+                <h4 className="font-semibold text-slate-300 mb-2">Current Education</h4>
+                <p className="text-slate-400 text-sm mb-1">Network Architecture (2nd Year)</p>
+                <p className="text-slate-400 text-sm">Diploma in Cyber Law</p>
+              </div>
+              <div>
+                <h4 className="font-semibold text-slate-300 mb-2">Personal Info</h4>
+                <p className="text-slate-400 text-sm">Age: 22</p>
+              </div>
+              <div>
+                <h4 className="font-semibold text-slate-300 mb-2">Languages</h4>
+                <div className="flex flex-wrap gap-2">
+                  {["English", "French", "Hindi"].map((lang, index) => (
+                    <span
+                      key={index}
+                      className="px-3 py-1 bg-green-primary/20 text-green-primary rounded-full text-sm"
+                    >
+                      {lang}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </motion.div>
