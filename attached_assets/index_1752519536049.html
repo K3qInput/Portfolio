@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>Kiro's Minecraft Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #0b111b;
+      color: #cbd5e1;
+      min-height: 100vh;
+      scroll-behavior: smooth;
+    }
+    a {
+      color: #22c55e;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover, a:focus { color: #a3e635; outline: none; }
+    img { max-width: 100%; display: block; border-radius: 12px; }
+    .container {
+      max-width: 1200px;
+      padding: 0 24px;
+      margin: 0 auto;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      background: #0f161fcc;
+      backdrop-filter: saturate(180%) blur(16px);
+      border-bottom: 1px solid #164d15;
+      z-index: 1000;
+    }
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 56px;
+      padding: 0 16px;
+    }
+    .logo {
+      font-weight: 800;
+      font-size: 1.4rem;
+      color: #22c55e;
+    }
+    nav.desktop-nav {
+      display: flex;
+      gap: 28px;
+    }
+    nav.desktop-nav a {
+      font-weight: 600;
+      font-size: 0.95rem;
+      position: relative;
+      padding: 8px 0;
+    }
+    nav.desktop-nav a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background-color: #22c55e;
+      transition: width 0.3s ease;
+      border-radius: 2px;
+    }
+    nav.desktop-nav a:hover::after, nav.desktop-nav a:focus::after { width: 100%; }
+    .mobile-toggle {
+      background: none;
+      border: none;
+      color: #22c55e;
+      font-size: 2rem;
+      cursor: pointer;
+      display: none;
+    }
+    main { padding: 40px 0 80px; }
+    section { margin-bottom: 56px; }
+    .section-title {
+      color: #22c55e;
+      font-weight: 800;
+      font-size: 2rem;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+    .intro {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 56px;
+    }
+    .intro h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      color: #22c55e;
+      margin-bottom: 14px;
+    }
+    .intro p {
+      font-size: 1.125rem;
+      color: #94a3b8;
+      line-height: 1.5;
+    }
+    .animation-gif {
+      max-width: 300px;
+      margin: 36px auto 0;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(34, 197, 94, 0.4);
+      border: 1.5px solid #22c55e;
+    }
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .skills-list li {
+      background: #22c55e;
+      padding: 12px 18px;
+      border-radius: 12px;
+      font-weight: 600;
+      color: #fff;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .skills-list li:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .three-column-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .grid-box {
+      background: #121b23;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 8px 12px rgba(34,197,94,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid #22c55e;
+    }
+    .grid-box:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 36px rgba(34,197,94,0.5);
+    }
+    .portfolio-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+    }
+    .portfolio-card {
+      border: 1.5px solid #22c55e;
+      border-radius: 12px;
+      padding: 12px;
+      background-color: #0f161f;
+      max-width: fit-content;
+      margin: auto;
+      box-shadow: 0 8px 24px rgba(34, 197, 94, 0.4);
+      transition: transform 0.3s ease;
+    }
+    .portfolio-card:hover {
+      transform: translateY(-6px);
+    }
+    .portfolio-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-top: 12px;
+      color: #bbf7d0;
+    }
+    .portfolio-description {
+      font-size: 1rem;
+      color: #94a3b8;
+      line-height: 1.5;
+    }
+    .tech-icons {
+      display: flex;
+      gap: 16px;
+      font-size: 1.6rem;
+      color: #22c55e;
+      margin-top: 8px;
+    }
+    footer {
+      background: #0a121b;
+      color: #64748b;
+      padding: 40px 24px 20px;
+      border-top: 1px solid #164d15;
+    }
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: space-between;
+    }
+    .footer-section {
+      flex: 1 1 220px;
+      min-width: 200px;
+    }
+    .footer-section h4 {
+      color: #22c55e;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .footer-section ul li { margin-bottom: 8px; }
+    .footer-section ul li a {
+      color: #64748b;
+      font-size: 0.95rem;
+    }
+    .footer-section ul li a:hover { color: #22c55e; }
+    .social-icons {
+      display: flex;
+      gap: 16px;
+      font-size: 1.8rem;
+      color: #22c55e;
+    }
+    @media (min-width: 768px) {
+      .mobile-toggle { display: none; }
+    }
+    @media (max-width: 767px) {
+      nav.desktop-nav { display: none; }
+      .mobile-toggle { display: block; }
+      .three-column-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    nav.mobile-nav-overlay {
+      position: fixed;
+      inset: 0;
+      background: #0d1219ee;
+      backdrop-filter: blur(8px);
+      display: none;
+      flex-direction: column;
+      padding-top: 80px;
+      z-index: 1200;
+    }
+    nav.mobile-nav-overlay.active { display: flex; }
+    nav.mobile-nav-overlay a {
+      color: #22c55e;
+      font-weight: 700;
+      font-size: 1.4rem;
+      padding: 12px 24px;
+      border-bottom: 1px solid #164d15;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">KiroDev</div>
+      <nav class="desktop-nav">
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="mobile-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">&#9776;</button>
+    </div>
+    <nav class="mobile-nav-overlay" id="mobile-menu">
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro" id="about">
+      <h1>Greetings! I'm Kiro </h1>
+      <p>A developer specializing in server optimization and security with 5 years of experience.</p>
+      <p>I specialize in GUI'S, Skript, Anti cheat Configurations, Server Security, Bug Finding/Fixing, Network Management.</p>
+      <p>Programming Languages: JavaScript, CSS, HTML, Python, Lua. Currently learning Go.</p>
+      <div class="animation-gif">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b7b0d63a-5cfd-412c-8651-dda91aff6363.png" alt="Minecraft animated GIF" width="300" height="168" />
+      </div>
+    </section>
+
+    <section id="skills" class="container">
+      <h2 class="section-title">My Skills</h2>
+      <div class="three-column-grid">
+        <div class="grid-box">
+          <h3>Skills</h3>
+          <ul class="skills-list">
+            <li>JavaScript</li><li>Node.js</li><li>HTML</li><li>CSS</li><li>Python</li><li>Lua</li><li>Go</li><li>Java</li><li>C++</li>
+          </ul>
+        </div>
+        <div class="grid-box">
+          <h3>Projects</h3>
+          <div class="portfolio-description">
+            <ul>
+              <li><a href="https://github.com/K3qInput/GUI-HUB" target="_blank">Project 1</a></li>
+              <li><a href="https://github.com/valexcloud/SH-Union" target="_blank">Project 2</a></li>
+              <li><a href="https://github.com/K3qInput/Matrix-Custom-Config/tree/main" target="_blank">Project 3</a></li>
+              <li><a href="https://github.com/K3qInput/Server-Ip-Hider" target="_blank">Project 4</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="grid-box">
+          <h3>Experience</h3>
+          <div class="portfolio-description">
+            <strong>Current Roles</strong>
+            <ul>
+              <li>Backend Developer</li><li>Server Optimization Specialist</li><li>Security Consultant</li>
+            </ul>
+            <strong>Past Experience</strong>
+            <ul>
+              <li>5 years in development</li><li>Multiple server projects</li><li>Various optimization tasks</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="container">
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="portfolio-grid">
+        <article class="portfolio-card">
+          <img src="https://64.media.tumblr.com/13699359580633d7379407c51ad572e8/4ff958ab667f39b1-7c/s500x750/f83ac7e133885d3460ebd9b25970b3fbc0d5700b.gif" alt="Project Image">
+          <h3 class="portfolio-title">DeluxeMenu GUI-HUB</h3>
+          <p class="portfolio-description">Custom GUI for Minecraft with intuitive layout and plugin support.</p>
+          <div class="tech-icons">
+            <span class="material-icons">code</span>
+            <span class="material-icons">view_module</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience" class="container">
+      <h2 class="section-title">Detailed Experience</h2>
+      <div class="portfolio-card">
+        <h3 class="portfolio-title">Professional Journey</h3>
+        <div class="portfolio-description">
+          <strong>Currently Working</strong>
+          <ul>
+            <li>Fuzz Labs – CTO</li><li>Sryzen – CTO</li><li>Hostrium – CTO</li><li>Valex Cloud – CTO</li><li>Craftsteal – Developer</li>
+          </ul>
+          <strong>Past Experience</strong>
+          <ul>
+            <li>Qloxhost – CEO</li><li>NicxoxNodes – CEO</li><li>Seragon – Founder</li><li>ElightNodes – CTO</li><li>HostingKarle – Manager</li><li>Crafted Realm – Developer</li><li>PvPParadise – Developer</li><li>TrashMCPE – Developer</li><li>Pika Network – Helper</li><li>Green MC – Staff Trainer</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="footer-container">
+      <section class="footer-section">
+        <h4>About Me</h4>
+        <p>Passionate developer specializing in JavaScript, Python, Golang, C++, and Lua.</p>
+      </section>
+      <section class="footer-section">
+        <h4>Important Links</h4>
+        <ul>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="https://github.com/K3qInput" target="_blank">GitHub</a></li>
+        </ul>
+      </section>
+      <section class="footer-section">
+        <h4>Connect</h4>
+        <div class="social-icons">
+          <a href="https://twitter.com" target="_blank"><span class="material-icons">twitter</span></a>
+          <a href="https://discord.com/users/1129755081416388750" target="_blank"><span class="material-icons">chat</span></a>
+          <a href="https://linkedin.com" target="_blank"><span class="material-icons">linkedin</span></a>
+        </div>
+      </section>
+    </div>
+  </footer>
+
+  <script>
+    const mobileToggleBtn = document.querySelector('.mobile-toggle');
+    const mobileNav = document.getElementById('mobile-menu');
+
+    mobileToggleBtn.addEventListener('click', () => {
+      const expanded = mobileToggleBtn.getAttribute('aria-expanded') === 'true' || false;
+      mobileToggleBtn.setAttribute('aria-expanded', !expanded);
+      mobileNav.classList.toggle('active');
+    });
+
+    mobileNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileToggleBtn.setAttribute('aria-expanded', false);
+        mobileNav.classList.remove('active');
+      });
+    });
+  </script>
+</body>
+</html>
