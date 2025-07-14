@@ -16,6 +16,9 @@ Preferred communication style: Simple, everyday language.
 - Updated Matrix Custom Config project image to use Matrix anticheat plugin image
 - Updated Server IP Hider project to use firewall/proxy themed image
 - Updated Essential Security Practices blog post to use lock/security themed image
+- **Added PostgreSQL database integration** - Replaced in-memory storage with persistent database storage
+- Created database connection with Neon PostgreSQL
+- Migrated all data operations to use Drizzle ORM with proper schema
 
 ## System Architecture
 
