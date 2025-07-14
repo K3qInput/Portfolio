@@ -8,6 +8,15 @@ This is a modern, full-stack portfolio website built for Kiro, a Minecraft serve
 
 Preferred communication style: Simple, everyday language.
 
+## Recent Changes
+
+- Fixed hero section greeting from "Greetings! I'm Kiro" to "I'm Kiro"
+- Enhanced header visibility with semi-transparent background
+- Added proper spacing to prevent header from hiding content
+- Updated Matrix Custom Config project image to use Matrix anticheat plugin image
+- Updated Server IP Hider project to use firewall/proxy themed image
+- Updated Essential Security Practices blog post to use lock/security themed image
+
 ## System Architecture
 
 ### Frontend Architecture

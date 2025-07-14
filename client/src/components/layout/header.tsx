@@ -45,7 +45,7 @@ export default function Header() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "glass-effect" : "bg-transparent"
+        isScrolled ? "glass-effect" : "bg-slate-900/90 backdrop-blur-sm"
       }`}
     >
       <div className="container mx-auto px-6 py-4">

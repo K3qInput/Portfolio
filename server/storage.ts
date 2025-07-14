@@ -48,7 +48,7 @@ export class MemStorage implements IStorage {
         slug: "essential-security-practices-for-game-servers",
         excerpt: "Protect your server from common threats with these essential security practices and anti-cheat configurations.",
         content: "Security is paramount in game server management...",
-        image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+        image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
         category: "Security",
         readTime: 8,
         published: true,

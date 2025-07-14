@@ -17,7 +17,7 @@ export default function Hero() {
   const skills = ["JavaScript", "Python", "Go", "Lua", "Java"];
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative">
+    <section id="home" className="min-h-screen flex items-center justify-center relative pt-20">
       <div className="container mx-auto px-6 text-center">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -25,7 +25,7 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            <span className="block mb-2">Greetings! I'm</span>
+            <span className="block mb-2">I'm</span>
             <span className="gradient-text typing-effect">Kiro</span>
           </h1>
           
