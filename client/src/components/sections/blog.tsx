@@ -1,25 +1,11 @@
 import { motion } from "framer-motion";
-import { useQuery } from "@tanstack/react-query";
 import BlogCard from "@/components/ui/blog-card";
-import { BlogPost } from "@shared/schema";
+import { useBlogPosts } from "@/hooks/use-static-data";
 
 export default function Blog() {
-  const { data: posts, isLoading, error } = useQuery<BlogPost[]>({
-    queryKey: ["/api/blog"],
-  });
+  const { data: posts, isLoading } = useBlogPosts();
 
-  if (error) {
-    return (
-      <section id="blog" className="py-20 relative">
-        <div className="container mx-auto px-6">
-          <div className="text-center">
-            <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-6">Latest Blog Posts</h2>
-            <p className="text-red-400">Failed to load blog posts. Please try again later.</p>
-          </div>
-        </div>
-      </section>
-    );
-  }
+
 
   return (
     <section id="blog" className="py-20 relative">
