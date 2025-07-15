@@ -19,7 +19,9 @@ export default function Skills() {
 
   const managementSkills = [
     "Team Leadership", "Project Management", "Resource Planning", 
-    "Strategic Planning", "Performance Monitoring", "Quality Assurance"
+    "Strategic Planning", "Performance Monitoring", "Quality Assurance",
+    "Staff Training", "Chart Analysis", "Budget Management", 
+    "Financial Planning", "Cost Optimization", "Risk Assessment"
   ];
 
   const specializations = [
@@ -62,18 +64,18 @@ export default function Skills() {
           </p>
         </motion.div>
 
-        {/* 3D Skills Overview */}
+        {/* Modern 3D Skills Overview */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-16 glass-effect p-8 rounded-2xl"
+          className="mb-16 glass-effect p-8 rounded-2xl bg-gradient-to-br from-slate-800/60 to-slate-900/80 border border-slate-700/50"
         >
-          <h3 className="text-2xl font-bold text-green-primary mb-8 text-center">Skills Overview</h3>
+          <h3 className="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-green-primary to-blue-400 bg-clip-text text-transparent">Skills Overview</h3>
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="relative perspective-1000">
               <div className="w-80 h-80 mx-auto relative transform-style-3d">
-                {/* 3D Donut Chart */}
+                {/* Modern 3D Donut Chart with Glow Effects */}
                 <svg className="w-full h-full transform -rotate-90" viewBox="0 0 200 200" style={{ transformStyle: 'preserve-3d' }}>
                   {skillsOverview.map((skill, index) => {
                     const total = skillsOverview.reduce((sum, s) => sum + s.percentage, 0);
@@ -81,20 +83,36 @@ export default function Skills() {
                     const startAngle = skillsOverview.slice(0, index).reduce((sum, s) => sum + ((s.percentage / total) * 360), 0);
                     
                     const outerRadius = 80;
-                    const innerRadius = 50;
                     const circumference = 2 * Math.PI * outerRadius;
                     const strokeDasharray = (percentage / 100) * circumference;
                     const strokeDashoffset = circumference - strokeDasharray;
                     
                     return (
                       <g key={skill.name}>
-                        {/* Main circle with 3D effect */}
+                        {/* Outer glow effect */}
+                        <motion.circle
+                          cx="100"
+                          cy="98"
+                          r={outerRadius + 2}
+                          stroke={skill.color}
+                          strokeWidth="20"
+                          fill="transparent"
+                          strokeDasharray={circumference}
+                          strokeDashoffset={strokeDashoffset}
+                          transform={`rotate(${startAngle} 100 100)`}
+                          initial={{ strokeDashoffset: circumference }}
+                          animate={chartAnimated ? { strokeDashoffset: strokeDashoffset } : { strokeDashoffset: circumference }}
+                          transition={{ delay: index * 0.2, duration: 1.5, ease: "easeOut" }}
+                          opacity="0.2"
+                          filter="url(#glow)"
+                        />
+                        {/* Main circle with gradient */}
                         <motion.circle
                           cx="100"
                           cy="100"
                           r={outerRadius}
-                          stroke={skill.color}
-                          strokeWidth="15"
+                          stroke={`url(#gradient-${index})`}
+                          strokeWidth="18"
                           fill="transparent"
                           strokeDasharray={circumference}
                           strokeDashoffset={strokeDashoffset}
@@ -105,13 +123,13 @@ export default function Skills() {
                           className="drop-shadow-lg"
                           filter="url(#shadow)"
                         />
-                        {/* 3D depth effect */}
+                        {/* 3D depth layers */}
                         <motion.circle
                           cx="100"
                           cy="102"
                           r={outerRadius}
                           stroke={skill.color}
-                          strokeWidth="15"
+                          strokeWidth="18"
                           fill="transparent"
                           strokeDasharray={circumference}
                           strokeDashoffset={strokeDashoffset}
@@ -119,28 +137,58 @@ export default function Skills() {
                           initial={{ strokeDashoffset: circumference }}
                           animate={chartAnimated ? { strokeDashoffset: strokeDashoffset } : { strokeDashoffset: circumference }}
                           transition={{ delay: index * 0.2, duration: 1.5, ease: "easeOut" }}
-                          opacity="0.3"
+                          opacity="0.4"
+                        />
+                        <motion.circle
+                          cx="100"
+                          cy="104"
+                          r={outerRadius}
+                          stroke={skill.color}
+                          strokeWidth="18"
+                          fill="transparent"
+                          strokeDasharray={circumference}
+                          strokeDashoffset={strokeDashoffset}
+                          transform={`rotate(${startAngle} 100 100)`}
+                          initial={{ strokeDashoffset: circumference }}
+                          animate={chartAnimated ? { strokeDashoffset: strokeDashoffset } : { strokeDashoffset: circumference }}
+                          transition={{ delay: index * 0.2, duration: 1.5, ease: "easeOut" }}
+                          opacity="0.2"
                         />
                       </g>
                     );
                   })}
-                  {/* Shadow filter */}
+                  {/* Enhanced filters and gradients */}
                   <defs>
                     <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
-                      <feDropShadow dx="2" dy="4" stdDeviation="3" floodColor="#000" floodOpacity="0.3"/>
+                      <feDropShadow dx="3" dy="6" stdDeviation="4" floodColor="#000" floodOpacity="0.4"/>
                     </filter>
+                    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                      <feMerge> 
+                        <feMergeNode in="coloredBlur"/>
+                        <feMergeNode in="SourceGraphic"/>
+                      </feMerge>
+                    </filter>
+                    {skillsOverview.map((skill, index) => (
+                      <linearGradient key={`gradient-${index}`} id={`gradient-${index}`} x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stopColor={skill.color} stopOpacity="1"/>
+                        <stop offset="50%" stopColor={skill.color} stopOpacity="0.8"/>
+                        <stop offset="100%" stopColor={skill.color} stopOpacity="0.6"/>
+                      </linearGradient>
+                    ))}
                   </defs>
                 </svg>
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center bg-slate-800/80 backdrop-blur-sm rounded-full w-24 h-24 flex flex-col items-center justify-center">
-                    <div className="text-2xl font-bold text-green-primary">5+</div>
-                    <div className="text-xs text-slate-400">Years</div>
+                  <div className="text-center bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-md rounded-full w-28 h-28 flex flex-col items-center justify-center border border-slate-600/50 shadow-xl">
+                    <div className="text-3xl font-bold bg-gradient-to-r from-green-primary to-blue-400 bg-clip-text text-transparent">5+</div>
+                    <div className="text-xs text-slate-300 font-medium">Years</div>
+                    <div className="text-xs text-slate-400">Experience</div>
                   </div>
                 </div>
               </div>
             </div>
             
-            <div className="space-y-4">
+            <div className="space-y-5">
               {skillsOverview.map((skill, index) => (
                 <motion.div
                   key={skill.name}
@@ -148,32 +196,39 @@ export default function Skills() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="flex items-center space-x-4 p-3 rounded-lg bg-slate-800/50 backdrop-blur-sm"
+                  className="flex items-center space-x-5 p-4 rounded-xl bg-gradient-to-r from-slate-800/60 to-slate-900/40 backdrop-blur-sm border border-slate-700/30 hover:border-slate-600/50 transition-all duration-300"
                 >
                   <div 
-                    className="w-4 h-4 rounded-full shadow-lg"
+                    className="w-6 h-6 rounded-full shadow-xl relative"
                     style={{ 
                       backgroundColor: skill.color,
-                      boxShadow: `0 0 10px ${skill.color}50`
+                      boxShadow: `0 0 15px ${skill.color}60, inset 0 2px 4px rgba(255,255,255,0.1)`
                     }}
-                  ></div>
+                  >
+                    <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/20 to-transparent"></div>
+                  </div>
                   <div className="flex-1">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="font-medium text-slate-300">{skill.name}</span>
-                      <span className="text-sm text-slate-400 font-bold">{skill.percentage}%</span>
+                    <div className="flex justify-between items-center mb-3">
+                      <span className="font-semibold text-slate-200 text-lg">{skill.name}</span>
+                      <span className="text-sm font-bold px-3 py-1 rounded-full" style={{ 
+                        color: skill.color,
+                        backgroundColor: `${skill.color}20`,
+                        border: `1px solid ${skill.color}40`
+                      }}>{skill.percentage}%</span>
                     </div>
-                    <div className="w-full bg-slate-700 rounded-full h-3 overflow-hidden">
+                    <div className="w-full bg-slate-700/70 rounded-full h-4 overflow-hidden shadow-inner">
                       <motion.div
                         initial={{ width: 0 }}
                         animate={chartAnimated ? { width: `${skill.percentage}%` } : { width: 0 }}
-                        transition={{ delay: index * 0.1 + 0.5, duration: 1, ease: "easeOut" }}
-                        className="h-3 rounded-full relative"
+                        transition={{ delay: index * 0.1 + 0.5, duration: 1.2, ease: "easeOut" }}
+                        className="h-4 rounded-full relative overflow-hidden"
                         style={{ 
-                          background: `linear-gradient(135deg, ${skill.color}, ${skill.color}80)`,
-                          boxShadow: `0 0 8px ${skill.color}60`
+                          background: `linear-gradient(135deg, ${skill.color}, ${skill.color}90, ${skill.color}70)`,
+                          boxShadow: `0 0 12px ${skill.color}50`
                         }}
                       >
-                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
+                        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
                       </motion.div>
                     </div>
                   </div>
@@ -192,24 +247,36 @@ export default function Skills() {
           >
             <h3 className="text-2xl font-bold text-green-primary mb-8">Programming Languages</h3>
             <div className="flex flex-wrap gap-3">
-              {programmingLanguages.map((lang, index) => (
-                <motion.div
-                  key={lang}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.05 }}
-                  whileHover={{ scale: 1.05 }}
-                  className="cursor-pointer"
-                >
-                  <Badge 
-                    variant="secondary" 
-                    className="px-4 py-2 bg-gradient-to-r from-green-primary/20 to-green-primary/10 text-green-primary border border-green-primary/30 hover:bg-green-primary/20 transition-all duration-300 shadow-lg hover:shadow-green-primary/20"
+              {programmingLanguages.map((lang, index) => {
+                const colors = [
+                  { bg: "from-yellow-500/20 to-yellow-500/10", text: "text-yellow-400", border: "border-yellow-500/30", shadow: "hover:shadow-yellow-500/20" },
+                  { bg: "from-green-500/20 to-green-500/10", text: "text-green-400", border: "border-green-500/30", shadow: "hover:shadow-green-500/20" },
+                  { bg: "from-red-500/20 to-red-500/10", text: "text-red-400", border: "border-red-500/30", shadow: "hover:shadow-red-500/20" },
+                  { bg: "from-purple-500/20 to-purple-500/10", text: "text-purple-400", border: "border-purple-500/30", shadow: "hover:shadow-purple-500/20" },
+                  { bg: "from-orange-500/20 to-orange-500/10", text: "text-orange-400", border: "border-orange-500/30", shadow: "hover:shadow-orange-500/20" },
+                  { bg: "from-cyan-500/20 to-cyan-500/10", text: "text-cyan-400", border: "border-cyan-500/30", shadow: "hover:shadow-cyan-500/20" },
+                ];
+                const color = colors[index % colors.length];
+                
+                return (
+                  <motion.div
+                    key={lang}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.05 }}
+                    whileHover={{ scale: 1.05 }}
+                    className="cursor-pointer"
                   >
-                    {lang}
-                  </Badge>
-                </motion.div>
-              ))}
+                    <Badge 
+                      variant="secondary" 
+                      className={`px-4 py-2 bg-gradient-to-r ${color.bg} ${color.text} border ${color.border} hover:bg-opacity-30 transition-all duration-300 shadow-lg ${color.shadow}`}
+                    >
+                      {lang}
+                    </Badge>
+                  </motion.div>
+                );
+              })}
             </div>
           </motion.div>
 
