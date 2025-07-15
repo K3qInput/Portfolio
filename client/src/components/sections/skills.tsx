@@ -71,7 +71,7 @@ export default function Skills() {
           viewport={{ once: true }}
           className="mb-16 glass-effect p-8 rounded-2xl bg-gradient-to-br from-slate-800/60 to-slate-900/80 border border-slate-700/50"
         >
-          <h3 className="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-green-primary to-blue-400 bg-clip-text text-transparent">Skills Overview</h3>
+          <h3 className="text-3xl font-bold text-center mb-8 text-green-primary">Skills Overview</h3>
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="relative perspective-1000">
               <div className="w-80 h-80 mx-auto relative transform-style-3d">
@@ -179,10 +179,10 @@ export default function Skills() {
                   </defs>
                 </svg>
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-md rounded-full w-28 h-28 flex flex-col items-center justify-center border border-slate-600/50 shadow-xl">
-                    <div className="text-3xl font-bold bg-gradient-to-r from-green-primary to-blue-400 bg-clip-text text-transparent">5+</div>
-                    <div className="text-xs text-slate-300 font-medium">Years</div>
-                    <div className="text-xs text-slate-400">Experience</div>
+                  <div className="text-center bg-slate-900/95 backdrop-blur-md rounded-full w-32 h-32 flex flex-col items-center justify-center border-2 border-green-primary/30 shadow-2xl">
+                    <div className="text-4xl font-bold text-green-primary drop-shadow-lg">5+</div>
+                    <div className="text-sm text-green-400 font-semibold">Years</div>
+                    <div className="text-xs text-slate-300">Experience</div>
                   </div>
                 </div>
               </div>
@@ -196,7 +196,7 @@ export default function Skills() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="flex items-center space-x-5 p-4 rounded-xl bg-gradient-to-r from-slate-800/60 to-slate-900/40 backdrop-blur-sm border border-slate-700/30 hover:border-slate-600/50 transition-all duration-300"
+                  className="flex items-center space-x-5 p-4 rounded-xl bg-slate-800/80 backdrop-blur-sm border border-slate-600/50 hover:border-slate-500/70 transition-all duration-300"
                 >
                   <div 
                     className="w-6 h-6 rounded-full shadow-xl relative"
@@ -209,26 +209,22 @@ export default function Skills() {
                   </div>
                   <div className="flex-1">
                     <div className="flex justify-between items-center mb-3">
-                      <span className="font-semibold text-slate-200 text-lg">{skill.name}</span>
-                      <span className="text-sm font-bold px-3 py-1 rounded-full" style={{ 
-                        color: skill.color,
-                        backgroundColor: `${skill.color}20`,
-                        border: `1px solid ${skill.color}40`
-                      }}>{skill.percentage}%</span>
+                      <span className="font-semibold text-white text-lg">{skill.name}</span>
+                      <span className="text-sm font-bold px-3 py-1 rounded-full bg-slate-700/80 text-white border border-slate-600">{skill.percentage}%</span>
                     </div>
-                    <div className="w-full bg-slate-700/70 rounded-full h-4 overflow-hidden shadow-inner">
+                    <div className="w-full bg-slate-600/80 rounded-full h-4 overflow-hidden shadow-inner">
                       <motion.div
                         initial={{ width: 0 }}
                         animate={chartAnimated ? { width: `${skill.percentage}%` } : { width: 0 }}
                         transition={{ delay: index * 0.1 + 0.5, duration: 1.2, ease: "easeOut" }}
                         className="h-4 rounded-full relative overflow-hidden"
                         style={{ 
-                          background: `linear-gradient(135deg, ${skill.color}, ${skill.color}90, ${skill.color}70)`,
-                          boxShadow: `0 0 12px ${skill.color}50`
+                          background: `linear-gradient(135deg, ${skill.color}, ${skill.color}CC)`,
+                          boxShadow: `0 0 15px ${skill.color}80`
                         }}
                       >
-                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
-                        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/25 to-transparent"></div>
+                        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-white/35 to-transparent"></div>
                       </motion.div>
                     </div>
                   </div>
