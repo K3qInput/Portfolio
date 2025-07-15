@@ -1,0 +1,45 @@
+The Netlify deploy errored, with the following guidance provided:
+
+**Diagnosis:**
+[line 100](#L100) shows the error message indicating that the deploy did not succeed because the deploy directory 'dist/public' does not exist.
+
+**Solution:**
+The issue is that the specified deployment directory 'dist/public' doesn't exist in the build process. To resolve this, you need to ensure that the correct build output directory is configured. Since the build script is `node build-static.js`, you should verify that this script is correctly generating the static files into the 'dist/public' directory. If the files are generated elsewhere, you will need to update the `publish` directory in the configuration to reflect the correct build output location. Make sure that the static files are being generated in the expected directory before deploying.
+
+If you need to change the directory structure or adjust the build configuration, make the necessary changes in the build script or deployment configuration to ensure the static files are correctly placed in the specified directory before deployment.
+
+The relevant error logs are:
+
+Line 86: [32m✓ built in 3.49s[39m
+Line 87: Static build complete!
+Line 88: ​
+Line 89: [90m(build.command completed in 4s)[39m
+Line 90: [96m[1m​[22m[39m
+Line 91: [96m[1mDeploy site                                                   [22m[39m
+Line 92: [96m[1m────────────────────────────────────────────────────────────────[22m[39m
+Line 93: ​
+Line 94: Section completed: deploying
+Line 95: [91m[1m​[22m[39m
+Line 96: [91m[1mConfiguration error                                           [22m[39m
+Line 97: [91m[1m────────────────────────────────────────────────────────────────[22m[39m
+Line 98: ​
+Line 99:   [31m[1mError message[22m[39m
+Line 100:   Deploy did not succeed: Deploy directory 'dist/public' does not exist
+Line 101: ​
+Line 102:   [31m[1mResolved config[22m[39m
+Line 103:   build:
+Line 104:     command: node build-static.js
+Line 105:     commandOrigin: config
+Line 106:     environment:
+Line 107:       - NODE_VERSION
+Line 108:     publish: /opt/build/repo/dist/public
+Line 109:     publishOrigin: config
+Line 110:   redirects:
+Line 111: Failed during stage 'building site': Build script returned non-zero exit code: 2
+Line 112:     - from: /*
+      status: 200
+      to: /index.html
+  redirectsOrigin: config
+Line 113: Build failed due to a user error: Build script returned non-zero exit code: 2
+Line 114: Failing build: Failed to build site
+Line 115: Finished processing build request in 25.811s
