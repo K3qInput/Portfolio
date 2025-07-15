@@ -4,6 +4,7 @@ import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import Hero from "@/components/sections/hero";
 import About from "@/components/sections/about";
+import Services from "@/components/sections/services";
 import Skills from "@/components/sections/skills";
 import Projects from "@/components/sections/projects";
 import ExperienceSection from "@/components/sections/experience";
@@ -39,6 +40,7 @@ export default function Home() {
         <main className="relative z-10">
           <Hero />
           <About />
+          <Services />
           <Skills />
           <Projects />
           <ExperienceSection />

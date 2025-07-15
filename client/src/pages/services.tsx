@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { detectUserCurrency, formatCurrency, CURRENCIES, getCurrencyInfo } from "@/utils/currency";
+import Header from "@/components/layout/header";
+import Footer from "@/components/layout/footer";
 
 interface ServicePackage {
   id: number;
@@ -43,7 +45,7 @@ export default function Services() {
         "Custom optimization configs",
         "Performance monitoring setup"
       ],
-      category: "one-time",
+      category: "monthly",
       icon: Zap,
       color: "#f59e0b"
     },
@@ -60,7 +62,7 @@ export default function Services() {
         "Database connections",
         "Error handling & debugging"
       ],
-      category: "one-time",
+      category: "monthly",
       icon: Code,
       color: "#3b82f6"
     },
@@ -77,7 +79,7 @@ export default function Services() {
         "Firewall configuration",
         "Monitoring system setup"
       ],
-      category: "one-time",
+      category: "monthly",
       icon: Shield,
       color: "#ef4444"
     },
@@ -94,7 +96,7 @@ export default function Services() {
         "Database configuration",
         "Integration testing"
       ],
-      category: "one-time",
+      category: "monthly",
       icon: Settings,
       color: "#8b5cf6"
     },
@@ -168,7 +170,9 @@ export default function Services() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-900 py-20">
+    <div className="min-h-screen bg-slate-900">
+      <Header />
+      <div className="pt-20">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -202,16 +206,16 @@ export default function Services() {
           </div>
         </motion.div>
 
-        {/* One-time Services */}
+        {/* Essential Monthly Services */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
           className="mb-16"
         >
-          <h2 className="text-3xl font-bold text-center mb-8 text-green-primary">One-Time Services</h2>
+          <h2 className="text-3xl font-bold text-center mb-8 text-green-primary">Essential Monthly Services</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {servicePackages.filter(pkg => pkg.category === "one-time").map((pkg, index) => (
+            {servicePackages.filter(pkg => pkg.category === "monthly" && !pkg.popular).map((pkg, index) => (
               <motion.div
                 key={pkg.id}
                 initial={{ opacity: 0, y: 30 }}
@@ -231,7 +235,7 @@ export default function Services() {
                   <span className="text-3xl font-bold" style={{ color: pkg.color }}>
                     {formatPrice(pkg.price)}
                   </span>
-                  <span className="text-slate-400 text-sm ml-1">one-time</span>
+                  <span className="text-slate-400 text-sm ml-1">/month</span>
                 </div>
                 
                 <ul className="space-y-2 mb-6">
@@ -256,15 +260,15 @@ export default function Services() {
           </div>
         </motion.div>
 
-        {/* Monthly Packages */}
+        {/* Premium Monthly Packages */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
         >
-          <h2 className="text-3xl font-bold text-center mb-8 text-green-primary">Monthly Packages</h2>
+          <h2 className="text-3xl font-bold text-center mb-8 text-green-primary">Premium Monthly Packages</h2>
           <div className="grid lg:grid-cols-3 gap-8">
-            {servicePackages.filter(pkg => pkg.category === "monthly").map((pkg, index) => (
+            {servicePackages.filter(pkg => pkg.category === "monthly" && pkg.popular).map((pkg, index) => (
               <motion.div
                 key={pkg.id}
                 initial={{ opacity: 0, y: 30 }}
@@ -350,6 +354,8 @@ export default function Services() {
           </p>
         </motion.div>
       </div>
+      </div>
+      <Footer />
     </div>
   );
 }
