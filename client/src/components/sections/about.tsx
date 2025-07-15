@@ -52,6 +52,35 @@ export default function About() {
             viewport={{ once: true }}
             className="glass-effect p-8 rounded-2xl"
           >
+            <div className="flex items-start space-x-4 mb-6">
+              <div className="relative">
+                <div className="w-16 h-16 rounded-full overflow-hidden border-3 border-green-primary/50 shadow-lg shadow-green-primary/20">
+                  <img 
+                    src="https://images-ext-1.discordapp.net/external/JbszHD6v-hwJ-a0PqqirRcj1mRMtJlBHwtsrELqq-P8/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/1129755081416388750/8ac8d8faa01acfd45c566464dcf69812.png?format=webp&quality=lossless"
+                    alt="Kiro's Avatar"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-green-primary rounded-full border-2 border-slate-900"></div>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-green-primary mb-1">Kiro</h3>
+                <p className="text-slate-400 text-sm">Senior Developer</p>
+                <div className="flex items-center space-x-2 mt-1">
+                  <div className="w-2 h-2 bg-green-primary rounded-full"></div>
+                  <span className="text-green-primary text-xs font-medium">Online</span>
+                </div>
+              </div>
+            </div>
+            
+            <div className="border-t border-slate-700/50 pt-4">
+              <p className="text-slate-400 text-sm leading-relaxed mb-4">
+                Experienced Minecraft developer with <span className="text-green-primary font-semibold">5+ years</span> of expertise in server optimization, security implementations, and team management.
+              </p>
+              <p className="text-slate-400 text-sm leading-relaxed">
+                Passionate about <span className="text-green-primary">Boxing</span> and <span className="text-green-primary">Chess</span>, bringing discipline and strategic thinking to development work.
+              </p>
+            </div>
             <h3 className="text-2xl font-bold text-green-primary mb-6">My Specializations</h3>
             <div className="space-y-4">
               {specializations.map((spec, index) => (
