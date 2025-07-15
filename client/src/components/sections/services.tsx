@@ -101,9 +101,17 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 * index }}
-              className={`glass-effect p-6 rounded-2xl hover:scale-105 transition-transform duration-300 relative ${
-                service.popular ? 'ring-2 ring-green-primary' : ''
+              whileHover={{ 
+                scale: 1.08, 
+                y: -8,
+                transition: { duration: 0.2, ease: "easeOut" }
+              }}
+              className={`glass-effect p-6 rounded-2xl transition-all duration-300 relative cursor-pointer hover:shadow-2xl ${
+                service.popular ? 'ring-2 ring-green-primary hover:ring-green-400' : 'hover:shadow-lg'
               }`}
+              style={{
+                transformStyle: 'preserve-3d'
+              }}
             >
               {service.popular && (
                 <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">

@@ -221,7 +221,16 @@ export default function Services() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 * index }}
-                className="glass-effect p-6 rounded-2xl hover:scale-105 transition-transform duration-300"
+                whileHover={{ 
+                  scale: 1.05, 
+                  y: -12,
+                  rotateX: 5,
+                  transition: { duration: 0.3, ease: "easeOut" }
+                }}
+                className="glass-effect p-6 rounded-2xl transition-all duration-300 cursor-pointer hover:shadow-2xl"
+                style={{
+                  transformStyle: 'preserve-3d'
+                }}
               >
                 <div className="flex items-center justify-center w-12 h-12 rounded-full mb-4 mx-auto"
                      style={{ backgroundColor: `${pkg.color}20` }}>
@@ -273,10 +282,19 @@ export default function Services() {
                 key={pkg.id}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
+                whileHover={{ 
+                  scale: 1.03, 
+                  y: -15,
+                  rotateX: 3,
+                  transition: { duration: 0.4, ease: "easeOut" }
+                }}
                 transition={{ delay: 0.1 * index }}
-                className={`glass-effect p-8 rounded-2xl relative hover:scale-105 transition-transform duration-300 ${
-                  pkg.popular ? 'ring-2 ring-green-primary' : ''
+                className={`glass-effect p-8 rounded-2xl relative transition-all duration-300 cursor-pointer hover:shadow-3xl ${
+                  pkg.popular ? 'ring-2 ring-green-primary hover:ring-green-400' : 'hover:shadow-2xl'
                 }`}
+                style={{
+                  transformStyle: 'preserve-3d'
+                }}
               >
                 {pkg.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
