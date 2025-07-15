@@ -1,51 +1,68 @@
-# Netlify Deployment Guide
+# Netlify Deployment Instructions
 
-## Quick Setup for Netlify
+## Overview
+This portfolio is configured for static deployment on Netlify. The build process creates a static version of the React frontend without the backend server.
 
-1. **Push your code to GitHub**
-2. **Connect to Netlify**:
-   - Go to [netlify.com](https://netlify.com)
-   - Click "New site from Git" 
-   - Connect your GitHub repository
+## Quick Deploy
 
-3. **Build Settings**:
-   - Build command: `npm run build`
-   - Publish directory: `dist/public`
-   - Node version: 18
+### Option 1: Drag and Drop (Recommended for first deployment)
+1. Run the build command: `node build-static.js`
+2. Go to [Netlify Deploy](https://app.netlify.com/drop)
+3. Drag the `dist/public` folder to the deployment area
+4. Your site will be deployed with a random URL
 
-4. **Deploy**:
-   - Netlify will automatically build and deploy your site
-   - You'll get a `.netlify.app` URL
+### Option 2: Git-based Deployment (Recommended for ongoing updates)
+1. Push your code to GitHub
+2. Connect your GitHub repository to Netlify
+3. Set build settings:
+   - **Build command**: `node build-static.js`
+   - **Publish directory**: `dist/public`
+   - **Node version**: 18
 
-## Alternative: Manual Build
+## Build Configuration
 
-If you want to build locally and drag-drop to Netlify:
+The project includes:
+- `netlify.toml` - Netlify configuration file
+- `build-static.js` - Custom build script for static deployment
+- Redirects configured for SPA routing
 
-```bash
-# Install dependencies
-npm install
+## Build Settings in Netlify
 
-# Build the static files
-npm run build
-
-# Upload the 'dist/public' folder to Netlify
+```
+Build command: node build-static.js
+Publish directory: dist/public
+Node version: 18
 ```
 
-## Custom Domain
+## Environment Variables (if needed)
+No environment variables are required for the static frontend deployment.
 
+## Domain Configuration
 After deployment, you can:
-- Add a custom domain in Netlify dashboard
-- Enable HTTPS (automatic with Netlify)
-- Set up redirects if needed
-
-## Environment Variables
-
-No environment variables needed for the static portfolio version.
+1. Use the provided Netlify domain (e.g., `amazing-site-123.netlify.app`)
+2. Configure a custom domain in Netlify settings
 
 ## Troubleshooting
 
-- Make sure `dist/public` contains your built files
-- Check that `index.html` is in the root of publish directory
-- Verify all asset paths are relative
+### Build Fails
+- Ensure Node.js 18+ is being used
+- Check that all dependencies are installed
+- Verify the build script runs locally first
 
-Your portfolio will be live at: `https://your-site-name.netlify.app`
+### 404 Errors on Direct Routes
+- The `netlify.toml` includes SPA redirects
+- All routes redirect to `index.html` with 200 status
+
+### Images Not Loading
+- Ensure all image URLs are accessible
+- External images (Discord CDN) should work fine
+- Local images should be in the `public` folder
+
+## Performance Optimization
+The build includes:
+- Vite production optimizations
+- Code splitting
+- Asset optimization
+- Tree shaking
+
+Your portfolio is ready for professional deployment on Netlify!

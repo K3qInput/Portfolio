@@ -3,8 +3,8 @@ import { execSync } from 'child_process';
 try {
   console.log('Building static version for Netlify...');
   
-  // Run the standard vite build command
-  execSync('npx vite build', { 
+  // Only build the frontend for static deployment
+  execSync('npx vite build --outDir dist/public', { 
     stdio: 'inherit',
     cwd: process.cwd()
   });
