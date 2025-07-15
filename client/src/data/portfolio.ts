@@ -46,29 +46,29 @@ export const projects: Project[] = [
 export const experiences: Experience[] = [
   {
     id: 1,
-    title: "Senior Minecraft Developer",
+    title: "Senior Minecraft Developer & Project Manager",
     company: "Freelance",
     period: "2022 - Present",
-    description: "Leading server optimization and security implementations for various Minecraft communities. Specializing in anti-cheat systems and performance tuning.",
-    technologies: ["Java", "Lua", "Security", "Performance"],
+    description: "Leading server optimization, security implementations, and team management for various Minecraft communities. Specializing in anti-cheat systems, Skript development, and marketing strategies.",
+    technologies: ["Java", "Skript", "Security", "Performance", "Management", "Marketing"],
     type: "current"
   },
   {
     id: 2,
-    title: "Plugin Developer",
+    title: "Plugin Developer & Configuration Specialist",
     company: "Various Servers",
     period: "2020 - 2022",
-    description: "Developed custom plugins and GUI systems for Minecraft servers. Focused on user experience and server stability.",
-    technologies: ["Java", "YAML", "MySQL", "GUI"],
+    description: "Developed custom plugins, GUI systems, and server configurations for Minecraft servers. Focused on user experience, server stability, and advanced Skript implementations.",
+    technologies: ["Java", "Skript", "YAML", "MySQL", "GUI", "Configuration"],
     type: "past"
   },
   {
     id: 3,
-    title: "Network Administrator",
+    title: "Network Administrator & Security Specialist",
     company: "Gaming Communities",
     period: "2019 - 2020",
-    description: "Managed server infrastructure and network security for gaming communities. Implemented DDoS protection and monitoring systems.",
-    technologies: ["Linux", "Network", "Security", "Monitoring"],
+    description: "Managed server infrastructure, network architecture, and security for gaming communities. Implemented DDoS protection, monitoring systems, and network optimization strategies.",
+    technologies: ["Linux", "Network Architecture", "Security", "Monitoring", "DDoS Protection"],
     type: "past"
   }
 ];

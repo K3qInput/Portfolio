@@ -15,18 +15,18 @@ export default function About() {
     },
     {
       icon: Globe,
-      title: "Network Management",
-      description: "Comprehensive network infrastructure management"
+      title: "Network Architecture & Management",
+      description: "Comprehensive network infrastructure and system management"
     },
     {
       icon: Bug,
-      title: "Bug Finding & Fixing",
-      description: "Identifying and resolving complex technical issues"
+      title: "Skript & Configuration Development",
+      description: "Expert in Skript programming and plugin configurations"
     },
     {
       icon: Layout,
-      title: "GUI Development",
-      description: "Creating intuitive user interfaces and experiences"
+      title: "GUI Development & Marketing",
+      description: "Creating intuitive interfaces with strategic marketing approach"
     }
   ];
 
@@ -101,6 +101,19 @@ export default function About() {
                       className="px-3 py-1 bg-green-primary/20 text-green-primary rounded-full text-sm"
                     >
                       {lang}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <h4 className="font-semibold text-slate-300 mb-2">Hobbies & Interests</h4>
+                <div className="flex flex-wrap gap-2">
+                  {["Boxing", "Chess", "Gaming", "Technology"].map((hobby, index) => (
+                    <span
+                      key={index}
+                      className="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm"
+                    >
+                      {hobby}
                     </span>
                   ))}
                 </div>

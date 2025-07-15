@@ -32,3 +32,26 @@ export interface ContactInfo {
   linkedin?: string;
   twitter?: string;
 }
+
+export interface Service {
+  id: number;
+  title: string;
+  description: string;
+  price: number;
+  currency: string;
+  features: string[];
+  category: "one-time" | "monthly";
+  popular?: boolean;
+}
+
+export interface ServicePackage {
+  id: number;
+  title: string;
+  description: string;
+  price: number;
+  currency: string;
+  features: string[];
+  services: string[];
+  duration: "monthly" | "one-time";
+  popular?: boolean;
+}

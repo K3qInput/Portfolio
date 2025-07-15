@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { Link, useLocation } from "wouter";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -17,15 +18,36 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const [location, setLocation] = useLocation();
+
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      const headerHeight = 80;
-      const targetPosition = element.offsetTop - headerHeight;
-      window.scrollTo({
-        top: targetPosition,
-        behavior: "smooth",
-      });
+    if (sectionId === "services") {
+      setLocation("/services");
+    } else {
+      if (location !== "/") {
+        setLocation("/");
+        setTimeout(() => {
+          const element = document.getElementById(sectionId);
+          if (element) {
+            const headerHeight = 80;
+            const targetPosition = element.offsetTop - headerHeight;
+            window.scrollTo({
+              top: targetPosition,
+              behavior: "smooth",
+            });
+          }
+        }, 100);
+      } else {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const headerHeight = 80;
+          const targetPosition = element.offsetTop - headerHeight;
+          window.scrollTo({
+            top: targetPosition,
+            behavior: "smooth",
+          });
+        }
+      }
     }
     setIsMobileMenuOpen(false);
   };
@@ -38,6 +60,7 @@ export default function Header() {
     { id: "experience", label: "Experience" },
     { id: "blog", label: "Blog" },
     { id: "contact", label: "Contact" },
+    { id: "services", label: "Services", isLink: true },
   ];
 
   return (

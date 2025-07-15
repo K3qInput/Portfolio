@@ -32,18 +32,20 @@ export default function Skills() {
   const specializations = [
     { name: "Server Optimization", level: 95, color: "#22c55e" },
     { name: "Security & Anti-cheat", level: 90, color: "#ef4444" },
-    { name: "GUI Development", level: 85, color: "#3b82f6" },
-    { name: "Network Management", level: 88, color: "#f59e0b" },
-    { name: "Bug Finding & Fixing", level: 92, color: "#8b5cf6" },
-    { name: "Plugin Development", level: 87, color: "#06b6d4" },
+    { name: "Skript Programming", level: 92, color: "#3b82f6" },
+    { name: "Network Architecture", level: 88, color: "#f59e0b" },
+    { name: "Configuration Management", level: 90, color: "#8b5cf6" },
+    { name: "Project Management", level: 85, color: "#06b6d4" },
+    { name: "Marketing & Strategy", level: 78, color: "#ec4899" },
+    { name: "Plugin Development", level: 87, color: "#10b981" },
   ];
 
   const skillsOverview = [
     { name: "Programming", percentage: 88, color: "#22c55e" },
-    { name: "Backend", percentage: 85, color: "#3b82f6" },
+    { name: "Management", percentage: 85, color: "#3b82f6" },
     { name: "Security", percentage: 90, color: "#ef4444" },
     { name: "Optimization", percentage: 95, color: "#f59e0b" },
-    { name: "DevOps", percentage: 78, color: "#8b5cf6" },
+    { name: "Marketing", percentage: 78, color: "#8b5cf6" },
   ];
 
   useEffect(() => {
