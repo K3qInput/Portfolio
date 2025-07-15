@@ -5,7 +5,7 @@ export const projects: Project[] = [
     id: 0,
     title: "Sterix Discord Bot",
     description: "Owner/Developer Verified Discord Bot with advanced moderation, entertainment, and utility features serving thousands of Discord servers.",
-    image: "https://images-ext-1.discordapp.net/external/JbszHD6v-hwJ-a0PqqirRcj1mRMtJlBHwtsrELqq-P8/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/1129755081416388750/8ac8d8faa01acfd45c566464dcf69812.png?format=webp&quality=lossless",
+    image: "https://images-ext-1.discordapp.net/external/X9937JmeHpoUTM0yDwD9z8vUCpD4_havPDSgrE005S4/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/1286376669770420304/ff7a8d171970bc79e84fcc9466e8bc49.png?format=webp&quality=lossless&width=648&height=648",
     category: "Discord Bot",
     technologies: ["Discord.js", "Node.js", "MongoDB", "Express.js", "API Integration"],
     githubUrl: "https://www.sterixbot.xyz/",
