@@ -8,7 +8,7 @@ export default function ExperienceSection() {
       id: 1,
       title: "Chief Technology Officer",
       company: "Fuzz Labs, Sryzen, Hostrium, Valex Cloud",
-      period: "2023 - Present",
+      period: "2025",
       description: "Leading technical strategy and development across multiple companies. Responsible for architecture decisions, team leadership, and innovative solution development.",
       technologies: ["Leadership", "Strategy", "Innovation"],
       type: "current"
@@ -17,7 +17,7 @@ export default function ExperienceSection() {
       id: 2,
       title: "Senior Developer",
       company: "Craftsteal",
-      period: "2023 - Present",
+      period: "2025",
       description: "Developing advanced server plugins and security systems. Focus on performance optimization and anti-cheat development.",
       technologies: ["Java", "Security", "Optimization"],
       type: "current"
