@@ -237,14 +237,14 @@ export default function Skills() {
           </div>
         </motion.div>
 
-        <div className="grid lg:grid-cols-3 gap-12 items-start">
+        <div className="grid lg:grid-cols-3 gap-8 items-start">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="glass-effect p-8 rounded-2xl min-h-[500px]"
+            className="glass-effect p-6 rounded-2xl min-h-[300px]"
           >
-            <h3 className="text-2xl font-bold text-green-primary mb-8">Programming Languages</h3>
+            <h3 className="text-2xl font-bold text-green-primary mb-6">Programming Languages</h3>
             <div className="flex flex-wrap gap-3">
               {programmingLanguages.map((lang, index) => {
                 const colors = [
@@ -283,9 +283,9 @@ export default function Skills() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="glass-effect p-8 rounded-2xl min-h-[500px]"
+            className="glass-effect p-6 rounded-2xl min-h-[300px]"
           >
-            <h3 className="text-2xl font-bold text-green-primary mb-8">Backend & Tools</h3>
+            <h3 className="text-2xl font-bold text-green-primary mb-6">Backend & Tools</h3>
             <div className="flex flex-wrap gap-3">
               {backendTools.map((tool, index) => (
                 <motion.div
@@ -312,9 +312,9 @@ export default function Skills() {
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="glass-effect p-8 rounded-2xl min-h-[500px]"
+            className="glass-effect p-6 rounded-2xl min-h-[300px]"
           >
-            <h3 className="text-2xl font-bold text-green-primary mb-8">Management Skills</h3>
+            <h3 className="text-2xl font-bold text-green-primary mb-6">Management Skills</h3>
             <div className="flex flex-wrap gap-3">
               {managementSkills.map((skill, index) => (
                 <motion.div
