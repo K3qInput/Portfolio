@@ -39,13 +39,13 @@ export default function Contact() {
           </p>
         </motion.div>
 
-        <div className="max-w-4xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-stretch">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="glass-effect p-8 rounded-2xl"
+              className="glass-effect p-8 rounded-2xl h-full flex flex-col justify-center"
             >
               <h3 className="text-2xl font-bold text-green-primary mb-6">Contact Information</h3>
               <div className="space-y-6">
@@ -82,7 +82,7 @@ export default function Contact() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="glass-effect p-8 rounded-2xl"
+              className="glass-effect p-8 rounded-2xl h-full flex flex-col justify-center"
             >
               <h3 className="text-2xl font-bold text-green-primary mb-6">Connect With Me</h3>
               <div className="flex space-x-4 mb-6">

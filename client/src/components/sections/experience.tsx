@@ -57,7 +57,7 @@ export default function ExperienceSection() {
           </p>
         </motion.div>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <div className="timeline-container">
             {experiences.map((experience, index) => (
               <TimelineItem

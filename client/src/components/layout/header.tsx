@@ -72,12 +72,12 @@ export default function Header() {
         isScrolled ? "glass-effect" : "bg-slate-900/90 backdrop-blur-sm"
       }`}
     >
-      <div className="px-2 py-4">
-        <nav className="flex items-center justify-between max-w-full">
+      <div className="px-6 py-4">
+        <nav className="container mx-auto flex items-center justify-between">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="gradient-text text-2xl font-bold cursor-pointer flex-shrink-0 ml-2"
+            className="gradient-text text-2xl font-bold cursor-pointer flex-shrink-0"
             onClick={() => scrollToSection("home")}
           >
             KiroDev
@@ -85,7 +85,7 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           {!isMobile && (
-            <div className="flex items-center space-x-8 mr-2 flex-1 justify-center">
+            <div className="flex items-center space-x-6 flex-1 justify-center">
               {navItems.map((item, index) => (
                 <motion.button
                   key={item.id}
