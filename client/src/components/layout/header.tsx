@@ -21,9 +21,7 @@ export default function Header() {
   const [location, setLocation] = useLocation();
 
   const scrollToSection = (sectionId: string) => {
-    if (sectionId === "services") {
-      setLocation("/services");
-    } else if (sectionId === "testing") {
+    if (sectionId === "testing") {
       setLocation("/testing");
     } else {
       if (location !== "/") {
