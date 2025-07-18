@@ -242,10 +242,10 @@ export default function Skills() {
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="glass-effect p-8 rounded-2xl"
+            className="glass-effect p-8 rounded-2xl h-[500px] flex flex-col"
           >
             <h3 className="text-2xl font-bold text-green-primary mb-8">Programming Languages</h3>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-3 flex-1 content-start">
               {programmingLanguages.map((lang, index) => {
                 const colors = [
                   { bg: "from-yellow-500/20 to-yellow-500/10", text: "text-yellow-400", border: "border-yellow-500/30", shadow: "hover:shadow-yellow-500/20" },
@@ -283,10 +283,10 @@ export default function Skills() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="glass-effect p-8 rounded-2xl"
+            className="glass-effect p-8 rounded-2xl h-[500px] flex flex-col"
           >
             <h3 className="text-2xl font-bold text-green-primary mb-8">Backend & Tools</h3>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-3 flex-1 content-start">
               {backendTools.map((tool, index) => (
                 <motion.div
                   key={tool}
@@ -312,7 +312,7 @@ export default function Skills() {
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="glass-effect p-8 rounded-2xl"
+            className="glass-effect p-8 rounded-2xl h-[500px] flex flex-col"
           >
             <h3 className="text-2xl font-bold text-green-primary mb-6">Management Skills</h3>
             <div className="flex flex-wrap gap-3 mb-8">
