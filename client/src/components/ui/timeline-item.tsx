@@ -42,7 +42,7 @@ export default function TimelineItem({ experience, index }: TimelineItemProps) {
       transition={{ delay: index * 0.1 }}
       className="timeline-item"
     >
-      <div className="glass-effect p-6 rounded-2xl h-[280px] flex flex-col">
+      <div className="glass-effect p-6 rounded-2xl min-h-[280px] flex flex-col">
         <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
           <h3 className="text-xl font-bold text-green-primary">{experience.title}</h3>
           <span className="text-sm text-slate-400">{experience.period}</span>
@@ -52,15 +52,15 @@ export default function TimelineItem({ experience, index }: TimelineItemProps) {
           <span className="text-lg font-semibold text-slate-300">{experience.company}</span>
         </div>
         
-        <p className="text-slate-400 mb-4 flex-grow">
+        <p className="text-slate-400 mb-4 flex-grow text-sm leading-relaxed">
           {experience.description}
         </p>
         
-        <div className="flex flex-wrap gap-2 mt-auto">
+        <div className="flex flex-wrap gap-2 mt-auto pt-2">
           {experience.technologies.map((tech, techIndex) => (
             <span
               key={techIndex}
-              className={`px-3 py-1 text-xs rounded-full ${getTechColor(tech)}`}
+              className={`px-3 py-1.5 text-xs rounded-full font-medium whitespace-nowrap ${getTechColor(tech)}`}
             >
               {tech}
             </span>
