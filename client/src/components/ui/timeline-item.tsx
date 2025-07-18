@@ -9,7 +9,7 @@ interface TimelineItemProps {
 export default function TimelineItem({ experience, index }: TimelineItemProps) {
   const getTechColor = (tech: string) => {
     const colors: { [key: string]: string } = {
-      "Leadership": "bg-green-primary/20 text-green-primary",
+      "Leadership": "bg-red-500/20 text-red-400 border border-pink-400/30",
       "Java": "bg-orange-500/20 text-orange-400",
       "Security": "bg-red-500/20 text-red-400",
       "Strategy": "bg-blue-500/20 text-blue-400",
