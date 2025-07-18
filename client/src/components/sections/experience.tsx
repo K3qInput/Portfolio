@@ -33,6 +33,24 @@ export default function ExperienceSection() {
     },
     {
       id: 4,
+      title: "Network Manager",
+      company: "BoigaSMP",
+      period: "2024 - 2025",
+      description: "Managing network operations, server infrastructure, and community development. Overseeing technical implementations and ensuring optimal server performance.",
+      technologies: ["Network Management", "Infrastructure", "Community"],
+      type: "current"
+    },
+    {
+      id: 5,
+      title: "Network Manager",
+      company: "BoltMC",
+      period: "2023 - 2024",
+      description: "Led network administration and technical operations. Responsible for server optimization, plugin management, and strategic network growth initiatives.",
+      technologies: ["Administration", "Optimization", "Strategy"],
+      type: "past"
+    },
+    {
+      id: 6,
       title: "Developer & Staff",
       company: "Various Minecraft Networks",
       period: "2020 - 2022",

@@ -10,6 +10,12 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
+- **Enhanced Premium Monthly Packages & Added Network Manager Experience** - July 18, 2025
+  - Improved Premium Monthly Pack spacing with responsive grid (gap-12, max-w-6xl)
+  - Enhanced "Most Popular" badge with bright gradient, animation, and better visibility
+  - Added BoigaSMP Network Manager (2024-2025) current position to experience
+  - Added BoltMC Network Manager (2023-2024) past position to experience
+  - Updated experience timeline with proper network management roles and technologies
 - **Perfect Services Page Button Alignment Fixed** - July 18, 2025
   - Fixed "Contact for Service" button overflow issues across all service sections
   - Optimized button sizing: py-2 px-3 with whitespace-nowrap for perfect containment
