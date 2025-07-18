@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { BlogPost } from "@shared/schema";
+import { Github, ExternalLink } from "lucide-react";
 
 interface BlogCardProps {
   post: BlogPost;
@@ -59,10 +60,25 @@ export default function BlogCard({ post, index }: BlogCardProps) {
           {post.excerpt}
         </p>
         
-        <div className="flex justify-between items-center text-sm text-slate-500">
+        <div className="flex justify-between items-center text-sm text-slate-500 mb-4">
           <span>{formatDate(post.createdAt)}</span>
           <span>{post.readTime} min read</span>
         </div>
+
+        {post.githubUrl && (
+          <div className="flex items-center justify-between pt-4 border-t border-slate-700">
+            <span className="text-sm text-slate-400">View on GitHub</span>
+            <a
+              href={post.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center space-x-2 text-green-primary hover:text-green-400 transition-colors"
+            >
+              <Github className="w-4 h-4" />
+              <ExternalLink className="w-3 h-3" />
+            </a>
+          </div>
+        )}
       </div>
     </motion.article>
   );

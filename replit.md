@@ -10,6 +10,15 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
+- **Major Portfolio Enhancement** - July 18, 2025
+- Added comprehensive Backend & Tools skills: Firewall Management, Proxy Configuration, DDoS Mitigation, Network Security, Load Balancing, SSL/TLS, VPN Setup, Intrusion Detection, Traffic Analysis, CDN Management
+- Made blogs functional with GitHub repository connections and interactive GitHub links
+- Added new service packages: Custom Solutions ($24/month), Web Development ($24/month)
+- Fixed "Most Popular" badge visibility with proper contrast and styling
+- Enhanced header navigation with larger font sizes and improved spacing
+- Fixed duplicate key warnings in services page by correcting service IDs
+- Updated Leaf Core Optimized Configs project with proper logo from GitHub
+- Added githubUrl field to blog posts database schema and UI components
 - **Netlify Deployment Fixed** - July 15, 2025  
 - Resolved build directory issue that caused deployment failure
 - Enhanced build script with better error handling and verification

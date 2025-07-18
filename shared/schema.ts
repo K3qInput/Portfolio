@@ -29,6 +29,7 @@ export const blogPosts = pgTable("blog_posts", {
   readTime: integer("read_time").notNull(),
   createdAt: timestamp("created_at").defaultNow().notNull(),
   published: boolean("published").default(false).notNull(),
+  githubUrl: text("github_url"),
 });
 
 export const insertUserSchema = createInsertSchema(users).pick({
@@ -52,6 +53,7 @@ export const insertBlogPostSchema = createInsertSchema(blogPosts).pick({
   category: true,
   readTime: true,
   published: true,
+  githubUrl: true,
 });
 
 export type InsertUser = z.infer<typeof insertUserSchema>;
