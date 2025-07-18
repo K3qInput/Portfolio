@@ -242,7 +242,7 @@ export default function Skills() {
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="glass-effect p-8 rounded-2xl h-[500px] flex flex-col"
+            className="glass-effect p-8 rounded-2xl h-[520px] flex flex-col"
           >
             <h3 className="text-2xl font-bold text-green-primary mb-6 flex-shrink-0">Programming Languages</h3>
             <div className="flex flex-wrap gap-4 flex-1 content-start overflow-hidden">
@@ -283,7 +283,7 @@ export default function Skills() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="glass-effect p-8 rounded-2xl h-[500px] flex flex-col"
+            className="glass-effect p-8 rounded-2xl h-[520px] flex flex-col"
           >
             <h3 className="text-2xl font-bold text-green-primary mb-6 flex-shrink-0">Backend & Tools</h3>
             <div className="flex flex-wrap gap-3 flex-1 content-start overflow-hidden">
@@ -312,7 +312,7 @@ export default function Skills() {
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="glass-effect p-8 rounded-2xl h-[500px] flex flex-col"
+            className="glass-effect p-8 rounded-2xl h-[520px] flex flex-col"
           >
             <h3 className="text-2xl font-bold text-green-primary mb-6 flex-shrink-0">Management Skills</h3>
             <div className="flex flex-wrap gap-3 flex-1 content-start overflow-hidden">

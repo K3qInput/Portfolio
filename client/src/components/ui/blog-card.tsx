@@ -33,7 +33,7 @@ export default function BlogCard({ post, index }: BlogCardProps) {
       viewport={{ once: true }}
       transition={{ delay: index * 0.1 }}
       whileHover={{ y: -10 }}
-      className="glass-effect rounded-2xl overflow-hidden transition-all duration-300"
+      className="glass-effect rounded-2xl overflow-hidden transition-all duration-300 h-[420px] flex flex-col"
     >
       <div className="relative overflow-hidden">
         <img
@@ -49,24 +49,24 @@ export default function BlogCard({ post, index }: BlogCardProps) {
         </div>
       </div>
 
-      <div className="p-6">
+      <div className="p-6 flex flex-col flex-grow">
         <h3 className="text-xl font-bold text-green-primary mb-2 hover:text-lime-accent transition-colors duration-300">
           <a href="#" className="cursor-pointer">
             {post.title}
           </a>
         </h3>
         
-        <p className="text-slate-400 mb-4 text-sm line-clamp-3">
+        <p className="text-slate-400 mb-4 text-sm line-clamp-3 flex-shrink-0">
           {post.excerpt}
         </p>
         
-        <div className="flex justify-between items-center text-sm text-slate-500 mb-4">
+        <div className="flex justify-between items-center text-sm text-slate-500 mb-4 flex-grow">
           <span>{formatDate(post.createdAt)}</span>
           <span>{post.readTime} min read</span>
         </div>
 
         {post.githubUrl && (
-          <div className="flex items-center justify-between pt-4 border-t border-slate-700">
+          <div className="flex items-center justify-between pt-4 border-t border-slate-700 mt-auto">
             <span className="text-sm text-slate-400">View on GitHub</span>
             <a
               href={post.githubUrl}

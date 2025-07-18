@@ -37,7 +37,7 @@ export default function Blog() {
             ))}
           </div>
         ) : (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
             {posts?.map((post, index) => (
               <BlogCard key={post.id} post={post} index={index} />
             ))}
