@@ -8,7 +8,7 @@ export default function Blog() {
 
 
   return (
-    <section id="blog" className="py-20 relative">
+    <section id="blog" className="py-24 relative">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

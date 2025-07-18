@@ -15,7 +15,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative pt-20">
+    <section id="home" className="min-h-screen flex items-center justify-center relative pt-24">
       <div className="container mx-auto px-6 text-center">
         <motion.div
           initial={{ opacity: 0, y: 50 }}

@@ -20,7 +20,7 @@ export default function Projects() {
 
   if (isLoading) {
     return (
-      <section id="projects" className="py-20 relative">
+      <section id="projects" className="py-24 relative">
         <div className="container mx-auto px-6">
           <div className="text-center">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-primary mx-auto"></div>
@@ -32,7 +32,7 @@ export default function Projects() {
   }
 
   return (
-    <section id="projects" className="py-20 relative">
+    <section id="projects" className="py-24 relative">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -284,7 +284,7 @@ export default function Services() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="mb-16"
+          className="mb-20 mt-16"
           id="one-time-services"
         >
           <h2 className="text-3xl font-bold text-center mb-8 text-green-primary">One-Time Setup Services</h2>
@@ -352,7 +352,7 @@ export default function Services() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="mb-16"
+          className="mb-20 mt-16"
         >
           <h2 className="text-3xl font-bold text-center mb-8 text-green-primary">Essential Monthly Services</h2>
           
@@ -469,7 +469,7 @@ export default function Services() {
             </div>
 
             {/* Bottom row - Custom Solutions centered */}
-            <div className="flex justify-center">
+            <div className="flex justify-center mt-8">
               <div className="max-w-md w-full">
                 {servicePackages.filter(pkg => pkg.id === 10).map((pkg, index) => (
                   <motion.div
@@ -532,7 +532,7 @@ export default function Services() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
-          className="mb-16"
+          className="mb-20 mt-20"
         >
           <h2 className="text-3xl font-bold text-center mb-8 text-green-primary">Premium Monthly Packages</h2>
           <div className="grid lg:grid-cols-3 gap-8">
@@ -611,7 +611,7 @@ export default function Services() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
-          className="mt-16 text-center glass-effect p-8 rounded-2xl"
+          className="mt-24 text-center glass-effect p-8 rounded-2xl"
         >
           <h3 className="text-2xl font-bold text-green-primary mb-4">Ready to Get Started?</h3>
           <p className="text-slate-400 mb-6">
