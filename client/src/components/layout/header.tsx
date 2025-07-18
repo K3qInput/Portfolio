@@ -74,7 +74,7 @@ export default function Header() {
         isScrolled ? "glass-effect" : "bg-slate-900/90 backdrop-blur-sm"
       }`}
     >
-      <div className="container mx-auto px-6 py-4">
+      <div className="container mx-auto px-4 py-4">
         <nav className="flex items-center justify-between">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -87,7 +87,7 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           {!isMobile && (
-            <div className="flex items-center space-x-6 ml-4">
+            <div className="flex items-center space-x-4 ml-8">
               {navItems.map((item, index) => (
                 <motion.button
                   key={item.id}
@@ -95,7 +95,7 @@ export default function Header() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
                   onClick={() => scrollToSection(item.id)}
-                  className="text-slate-300 hover:text-green-primary transition-colors duration-300 relative group whitespace-nowrap"
+                  className="text-slate-300 hover:text-green-primary transition-colors duration-300 relative group whitespace-nowrap text-sm px-1"
                 >
                   {item.label}
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-green-primary group-hover:w-full transition-all duration-300"></span>

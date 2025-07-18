@@ -114,9 +114,9 @@ export default function Services() {
               }}
             >
               {service.popular && (
-                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                  <Badge className="bg-green-primary text-black px-3 py-1">
-                    <Star className="w-3 h-3 mr-1" />
+                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
+                  <Badge className="bg-green-primary text-slate-900 px-3 py-1 font-bold shadow-lg">
+                    <Star className="w-3 h-3 mr-1 fill-slate-900" />
                     Popular
                   </Badge>
                 </div>

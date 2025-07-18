@@ -398,9 +398,9 @@ export default function Services() {
                 }}
               >
                 {pkg.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <Badge className="bg-green-primary text-black px-4 py-1">
-                      <Star className="w-3 h-3 mr-1" />
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
+                    <Badge className="bg-green-primary text-slate-900 px-4 py-1 font-bold shadow-lg">
+                      <Star className="w-3 h-3 mr-1 fill-slate-900" />
                       Most Popular
                     </Badge>
                   </div>

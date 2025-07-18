@@ -15,7 +15,7 @@ export const projects: Project[] = [
     id: 1,
     title: "Leaf Core Optimized Configs",
     description: "High-performance server configurations optimized for Leaf Core with advanced settings for maximum performance and stability.",
-    image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+    image: "https://raw.githubusercontent.com/Winds-Studio/Leaf-website/238b129792b9fda92da838808479c536eb80a3f7/pages/public/logo.svg",
     category: "optimization",
     technologies: ["YAML", "Configuration", "Performance", "Optimization"],
     githubUrl: "https://github.com/K3qInput/Leaf-Core-Optimized-Configs",
@@ -119,6 +119,7 @@ export const blogPosts: BlogPost[] = [
     title: "Advanced Server Optimization Techniques",
     slug: "advanced-server-optimization-techniques",
     excerpt: "Learn how to optimize your Minecraft server for maximum performance with these advanced techniques and best practices.",
+    githubUrl: "https://github.com/K3qInput/Leaf-Core-Optimized-Configs",
     content: `
 # Advanced Server Optimization Techniques
 
@@ -198,6 +199,7 @@ Server optimization is an ongoing process that requires constant attention and r
     title: "Essential Security Practices for Game Servers",
     slug: "essential-security-practices-for-game-servers",
     excerpt: "Protect your server from common threats with these essential security practices and anti-cheat configurations.",
+    githubUrl: "https://github.com/K3qInput/Matrix-Custom-Config",
     content: `
 # Essential Security Practices for Game Servers
 
