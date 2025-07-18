@@ -245,7 +245,7 @@ export default function Skills() {
             className="glass-effect p-8 rounded-2xl h-[500px] flex flex-col"
           >
             <h3 className="text-2xl font-bold text-green-primary mb-6 flex-shrink-0">Programming Languages</h3>
-            <div className="flex flex-wrap gap-3 flex-1 content-start overflow-hidden">
+            <div className="flex flex-wrap gap-4 flex-1 content-start overflow-hidden">
               {programmingLanguages.map((lang, index) => {
                 const colors = [
                   { bg: "from-yellow-500/20 to-yellow-500/10", text: "text-yellow-400", border: "border-yellow-500/30", shadow: "hover:shadow-yellow-500/20" },
