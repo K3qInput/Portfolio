@@ -179,10 +179,10 @@ export default function Skills() {
                   </defs>
                 </svg>
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center bg-gradient-to-br from-slate-900/95 to-green-900/20 backdrop-blur-md rounded-full w-32 h-32 flex flex-col items-center justify-center border-2 border-green-primary/50 shadow-2xl shadow-green-primary/20">
-                    <div className="text-4xl font-bold text-green-400 drop-shadow-lg">5+</div>
-                    <div className="text-sm text-green-300 font-semibold">Years</div>
-                    <div className="text-xs text-green-200/80">Experience</div>
+                  <div className="text-center bg-gradient-to-br from-slate-900/95 to-slate-800/90 backdrop-blur-md rounded-full w-32 h-32 flex flex-col items-center justify-center border border-slate-600/50 shadow-2xl">
+                    <div className="text-4xl font-bold text-white drop-shadow-lg">5+</div>
+                    <div className="text-sm text-slate-300 font-semibold">Years</div>
+                    <div className="text-xs text-slate-400">Experience</div>
                   </div>
                 </div>
               </div>

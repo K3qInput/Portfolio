@@ -34,6 +34,42 @@ export default function Services() {
   const servicePackages: ServicePackage[] = [
     {
       id: 1,
+      title: "Custom Setup",
+      description: "Fully customized server setup tailored to your specific requirements",
+      price: 15,
+      currency: "USD",
+      features: [
+        "Complete custom configuration",
+        "Tailored plugin setup",
+        "Custom optimization",
+        "Security implementation",
+        "Performance tuning",
+        "Ongoing support included"
+      ],
+      category: "one-time",
+      icon: Settings,
+      color: "#22c55e"
+    },
+    {
+      id: 2,
+      title: "Premade Setup",
+      description: "Pre-configured server setup with proven configurations",
+      price: 10,
+      currency: "USD",
+      features: [
+        "Pre-tested configurations",
+        "Standard optimization",
+        "Security setup",
+        "Plugin configurations",
+        "Performance optimization",
+        "Setup documentation"
+      ],
+      category: "one-time",
+      icon: Zap,
+      color: "#3b82f6"
+    },
+    {
+      id: 3,
       title: "Server Optimization",
       description: "Complete server performance optimization and monitoring setup",
       price: 3,
@@ -50,7 +86,7 @@ export default function Services() {
       color: "#f59e0b"
     },
     {
-      id: 2,
+      id: 4,
       title: "Skript Development",
       description: "Custom Skript programming for your specific needs",
       price: 2.5,
@@ -67,7 +103,7 @@ export default function Services() {
       color: "#3b82f6"
     },
     {
-      id: 3,
+      id: 5,
       title: "Security & Anti-cheat",
       description: "Comprehensive security setup with advanced anti-cheat configurations",
       price: 4,
@@ -84,7 +120,7 @@ export default function Services() {
       color: "#ef4444"
     },
     {
-      id: 4,
+      id: 6,
       title: "Configuration Package",
       description: "Complete plugin and GUI configuration service",
       price: 3.5,
@@ -203,6 +239,69 @@ export default function Services() {
                 ))}
               </SelectContent>
             </Select>
+          </div>
+        </motion.div>
+
+        {/* One-Time Setup Services */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          className="mb-16"
+        >
+          <h2 className="text-3xl font-bold text-center mb-8 text-green-primary">One-Time Setup Services</h2>
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {servicePackages.filter(pkg => pkg.category === "one-time").map((pkg, index) => (
+              <motion.div
+                key={pkg.id}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 * index }}
+                whileHover={{ 
+                  scale: 1.05, 
+                  y: -12,
+                  rotateX: 5,
+                  transition: { duration: 0.3, ease: "easeOut" }
+                }}
+                className="glass-effect p-8 rounded-2xl transition-all duration-300 cursor-pointer hover:shadow-2xl"
+                style={{
+                  transformStyle: 'preserve-3d'
+                }}
+              >
+                <div className="flex items-center justify-center w-16 h-16 rounded-full mb-6 mx-auto"
+                     style={{ backgroundColor: `${pkg.color}20` }}>
+                  <pkg.icon className="w-8 h-8" style={{ color: pkg.color }} />
+                </div>
+                
+                <h3 className="text-2xl font-bold text-center mb-4 text-slate-300">{pkg.title}</h3>
+                <p className="text-slate-400 text-center mb-6">{pkg.description}</p>
+                
+                <div className="text-center mb-6">
+                  <span className="text-4xl font-bold" style={{ color: pkg.color }}>
+                    {formatPrice(pkg.price)}
+                  </span>
+                  <span className="text-slate-400 text-sm ml-1">one-time</span>
+                </div>
+                
+                <ul className="space-y-3 mb-8">
+                  {pkg.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-start space-x-3">
+                      <Check className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                      <span className="text-slate-400">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                
+                <Button
+                  onClick={() => handleBuyService(pkg.title)}
+                  className="w-full py-3 text-lg"
+                  style={{ backgroundColor: pkg.color }}
+                >
+                  <MessageCircle className="w-5 h-5 mr-2" />
+                  Contact for Service
+                </Button>
+              </motion.div>
+            ))}
           </div>
         </motion.div>
 

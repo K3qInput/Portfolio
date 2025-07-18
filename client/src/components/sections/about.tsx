@@ -15,13 +15,13 @@ export default function About() {
     },
     {
       icon: Globe,
-      title: "Network Architecture & Management",
-      description: "Comprehensive network infrastructure and system management"
+      title: "Network Architecture & Proxy Management",
+      description: "Network infrastructure, proxy configurations, and firewall management"
     },
     {
       icon: Bug,
-      title: "Skript & Configuration Development",
-      description: "Expert in Skript programming and plugin configurations"
+      title: "Fullstack Development & Configuration",
+      description: "Expert in fullstack development, Skript programming, and system configurations"
     },
     {
       icon: Layout,
@@ -45,7 +45,7 @@ export default function About() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-2 gap-8">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -65,7 +65,7 @@ export default function About() {
               </div>
               <div>
                 <h3 className="text-xl font-bold text-green-primary mb-1">Kiro</h3>
-                <p className="text-slate-400 text-sm">Senior Developer</p>
+                <p className="text-slate-400 text-sm">Manager/Developer</p>
                 <div className="flex items-center space-x-2 mt-1">
                   <div className="w-2 h-2 bg-green-primary rounded-full"></div>
                   <span className="text-green-primary text-xs font-medium">Online</span>
@@ -75,7 +75,7 @@ export default function About() {
             
             <div className="border-t border-slate-700/50 pt-4">
               <p className="text-slate-400 text-sm leading-relaxed mb-4">
-                Experienced Minecraft developer with <span className="text-green-primary font-semibold">5+ years</span> of expertise in server optimization, security implementations, and team management.
+                Experienced developer with <span className="text-green-primary font-semibold">5+ years</span> of expertise in server optimization, security implementations, and team management.
               </p>
               <p className="text-slate-400 text-sm leading-relaxed">
                 Passionate about <span className="text-green-primary">Boxing</span> and <span className="text-green-primary">Chess</span>, bringing discipline and strategic thinking to development work.
@@ -150,17 +150,7 @@ export default function About() {
             </div>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-          >
-            <img
-              src="https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
-              alt="Professional coding setup with multiple monitors"
-              className="rounded-2xl shadow-2xl neon-glow"
-            />
-          </motion.div>
+
         </div>
       </div>
     </section>

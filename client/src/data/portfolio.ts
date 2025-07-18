@@ -13,6 +13,36 @@ export const projects: Project[] = [
   },
   {
     id: 1,
+    title: "Leaf Core Optimized Configs",
+    description: "High-performance server configurations optimized for Leaf Core with advanced settings for maximum performance and stability.",
+    image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+    category: "optimization",
+    technologies: ["YAML", "Configuration", "Performance", "Optimization"],
+    githubUrl: "https://github.com/K3qInput/Leaf-Core-Optimized-Configs",
+    liveUrl: "#"
+  },
+  {
+    id: 2,
+    title: "Utility Skripts",
+    description: "Collection of useful Skript utilities for server management, automation, and enhanced gameplay features.",
+    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+    category: "automation",
+    technologies: ["Skript", "Automation", "Server Management", "Utilities"],
+    githubUrl: "https://github.com/K3qInput/Utility-Skripts",
+    liveUrl: "#"
+  },
+  {
+    id: 3,
+    title: "Soulbound System",
+    description: "Advanced soulbound item system with custom mechanics, durability management, and player binding features.",
+    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+    category: "plugin",
+    technologies: ["Java", "Plugin Development", "Game Mechanics", "MySQL"],
+    githubUrl: "https://github.com/K3qInput/Soulbound-System",
+    liveUrl: "#"
+  },
+  {
+    id: 4,
     title: "DeluxeMenu GUI-HUB",
     description: "Custom GUI for Minecraft with intuitive layout and plugin support. Features modern design principles and responsive interactions.",
     image: "https://64.media.tumblr.com/13699359580633d7379407c51ad572e8/4ff958ab667f39b1-7c/s500x750/f83ac7e133885d3460ebd9b25970b3fbc0d5700b.gif",
@@ -22,7 +52,7 @@ export const projects: Project[] = [
     liveUrl: "#"
   },
   {
-    id: 2,
+    id: 5,
     title: "Matrix Custom Config",
     description: "Advanced anti-cheat configuration with custom detection algorithms and real-time monitoring capabilities.",
     image: "https://i.imgur.com/Fukuzmp.png",
@@ -32,7 +62,7 @@ export const projects: Project[] = [
     liveUrl: "#"
   },
   {
-    id: 3,
+    id: 6,
     title: "Server IP Hider",
     description: "Advanced IP protection system with proxy detection and DDoS mitigation for enhanced server security.",
     image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
@@ -42,7 +72,7 @@ export const projects: Project[] = [
     liveUrl: "#"
   },
   {
-    id: 4,
+    id: 7,
     title: "SH-Union Platform",
     description: "Collaborative platform for server management with real-time collaboration tools and advanced analytics.",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
@@ -93,6 +123,8 @@ export const blogPosts: BlogPost[] = [
 # Advanced Server Optimization Techniques
 
 Server optimization is crucial for maintaining high performance and ensuring a smooth experience for your players. In this guide, I'll share some advanced techniques that I've developed over my 5+ years of experience in Minecraft server development.
+
+Check out my [Leaf Core Optimized Configs](https://github.com/K3qInput/Leaf-Core-Optimized-Configs) repository for production-ready configurations.
 
 ## Memory Management
 
@@ -170,6 +202,8 @@ Server optimization is an ongoing process that requires constant attention and r
 # Essential Security Practices for Game Servers
 
 Security is paramount in game server management. Over my years of experience, I've encountered numerous security challenges and developed comprehensive solutions to protect gaming communities.
+
+For practical implementations, check out my [Matrix Custom Config](https://github.com/K3qInput/Matrix-Custom-Config) and [Server IP Hider](https://github.com/K3qInput/Server-Ip-Hider) repositories.
 
 ## Authentication and Authorization
 
@@ -250,6 +284,8 @@ Security in gaming environments requires a multi-layered approach. By implementi
 # Building Modern Minecraft Plugins
 
 Modern plugin development has evolved significantly. In this guide, I'll share the best practices and techniques I've developed for creating efficient, maintainable plugins.
+
+Explore my [Soulbound System](https://github.com/K3qInput/Soulbound-System) and [Utility Skripts](https://github.com/K3qInput/Utility-Skripts) repositories for real-world examples.
 
 ## Development Environment Setup
 

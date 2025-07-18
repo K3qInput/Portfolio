@@ -23,6 +23,8 @@ export default function Header() {
   const scrollToSection = (sectionId: string) => {
     if (sectionId === "services") {
       setLocation("/services");
+    } else if (sectionId === "testing") {
+      setLocation("/testing");
     } else {
       if (location !== "/") {
         setLocation("/");
@@ -56,6 +58,7 @@ export default function Header() {
     { id: "home", label: "Home" },
     { id: "about", label: "About" },
     { id: "services", label: "Services" },
+    { id: "testing", label: "Testing" },
     { id: "skills", label: "Skills" },
     { id: "projects", label: "Projects" },
     { id: "experience", label: "Experience" },
