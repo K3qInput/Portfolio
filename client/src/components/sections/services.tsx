@@ -151,7 +151,7 @@ export default function Services() {
                 className="w-full"
                 style={{ backgroundColor: service.color }}
               >
-                <Link href="/services">View Details</Link>
+                <Link href="/services#professional-services">View Details</Link>
               </Button>
             </motion.div>
           ))}
@@ -164,7 +164,7 @@ export default function Services() {
           className="text-center"
         >
           <Button asChild size="lg" className="bg-gradient-to-r from-green-primary to-green-400 hover:from-green-600 hover:to-green-500 text-white hover:text-white font-bold text-lg px-8 py-4 shadow-xl shadow-green-primary/20 border-2 border-green-primary/30 hover:shadow-green-primary/40 transition-all duration-300">
-            <Link href="/services">
+            <Link href="/services#professional-services">
               <MessageCircle className="w-6 h-6 mr-3" />
               View All Services & Pricing
             </Link>

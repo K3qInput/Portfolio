@@ -250,6 +250,7 @@ export default function Services() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
+          id="professional-services"
         >
           <h1 className="text-4xl md:text-6xl font-bold gradient-text mb-6">
             Professional Services
