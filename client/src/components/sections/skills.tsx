@@ -15,7 +15,9 @@ export default function Skills() {
   const backendTools = [
     "Node.js", "Express.js", "Docker", "Linux", "MySQL", 
     "PostgreSQL", "Git", "MongoDB", "Redis", "Nginx",
-    "Firewall Management", "DDoS Mitigation"
+    "Firewall Management", "Proxy Configuration", "DDoS Mitigation",
+    "Network Security", "Load Balancing", "SSL/TLS", "VPN Setup",
+    "Intrusion Detection", "Traffic Analysis", "CDN Management"
   ];
 
   const managementSkills = [
