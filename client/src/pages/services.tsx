@@ -175,24 +175,6 @@ export default function Services() {
     },
     {
       id: 9,
-      title: "Custom Solutions",
-      description: "Tailored monthly package for unique server requirements",
-      price: 24,
-      currency: "USD",
-      features: [
-        "Custom plugin development",
-        "Specialized configurations",
-        "Advanced security setup",
-        "Performance optimization",
-        "Priority support",
-        "Monthly strategy sessions"
-      ],
-      category: "monthly",
-      icon: Settings,
-      color: "#f59e0b"
-    },
-    {
-      id: 10,
       title: "Web Development",
       description: "Professional web development and design services",
       price: 24,
@@ -208,6 +190,24 @@ export default function Services() {
       category: "monthly",
       icon: Globe,
       color: "#06b6d4"
+    },
+    {
+      id: 10,
+      title: "Custom Solutions",
+      description: "Tailored monthly package for unique server requirements",
+      price: 24,
+      currency: "USD",
+      features: [
+        "Custom plugin development",
+        "Specialized configurations",
+        "Advanced security setup",
+        "Performance optimization",
+        "Priority support",
+        "Monthly strategy sessions"
+      ],
+      category: "monthly",
+      icon: Settings,
+      color: "#f59e0b"
     },
     {
       id: 11,
