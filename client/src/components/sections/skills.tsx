@@ -237,15 +237,15 @@ export default function Skills() {
           </div>
         </motion.div>
 
-        <div className="grid lg:grid-cols-3 gap-8 items-start">
+        <div className="grid lg:grid-cols-3 gap-6 items-start">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="glass-effect p-6 rounded-2xl min-h-[300px]"
+            className="glass-effect p-6 rounded-2xl min-h-[280px]"
           >
             <h3 className="text-2xl font-bold text-green-primary mb-6">Programming Languages</h3>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-2">
               {programmingLanguages.map((lang, index) => {
                 const colors = [
                   { bg: "from-yellow-500/20 to-yellow-500/10", text: "text-yellow-400", border: "border-yellow-500/30", shadow: "hover:shadow-yellow-500/20" },
@@ -269,7 +269,7 @@ export default function Skills() {
                   >
                     <Badge 
                       variant="secondary" 
-                      className={`px-4 py-2 bg-gradient-to-r ${color.bg} ${color.text} border ${color.border} hover:bg-opacity-30 transition-all duration-300 shadow-lg ${color.shadow}`}
+                      className={`px-3 py-1 text-sm bg-gradient-to-r ${color.bg} ${color.text} border ${color.border} hover:bg-opacity-30 transition-all duration-300 shadow-lg ${color.shadow}`}
                     >
                       {lang}
                     </Badge>
@@ -283,10 +283,10 @@ export default function Skills() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="glass-effect p-6 rounded-2xl min-h-[300px]"
+            className="glass-effect p-6 rounded-2xl min-h-[280px]"
           >
             <h3 className="text-2xl font-bold text-green-primary mb-6">Backend & Tools</h3>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-2">
               {backendTools.map((tool, index) => (
                 <motion.div
                   key={tool}
@@ -299,7 +299,7 @@ export default function Skills() {
                 >
                   <Badge 
                     variant="secondary" 
-                    className="px-4 py-2 bg-gradient-to-r from-blue-500/20 to-blue-500/10 text-blue-400 border border-blue-500/30 hover:bg-blue-500/20 transition-all duration-300 shadow-lg hover:shadow-blue-500/20"
+                    className="px-3 py-1 text-sm bg-gradient-to-r from-blue-500/20 to-blue-500/10 text-blue-400 border border-blue-500/30 hover:bg-blue-500/20 transition-all duration-300 shadow-lg hover:shadow-blue-500/20"
                   >
                     {tool}
                   </Badge>
@@ -312,10 +312,10 @@ export default function Skills() {
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="glass-effect p-6 rounded-2xl min-h-[300px]"
+            className="glass-effect p-6 rounded-2xl min-h-[280px]"
           >
             <h3 className="text-2xl font-bold text-green-primary mb-6">Management Skills</h3>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-2">
               {managementSkills.map((skill, index) => (
                 <motion.div
                   key={skill}
@@ -328,7 +328,7 @@ export default function Skills() {
                 >
                   <Badge 
                     variant="secondary" 
-                    className="px-4 py-2 bg-gradient-to-r from-purple-500/20 to-purple-500/10 text-purple-400 border border-purple-500/30 hover:bg-purple-500/20 transition-all duration-300 shadow-lg hover:shadow-purple-500/20"
+                    className="px-3 py-1 text-sm bg-gradient-to-r from-purple-500/20 to-purple-500/10 text-purple-400 border border-purple-500/30 hover:bg-purple-500/20 transition-all duration-300 shadow-lg hover:shadow-purple-500/20"
                   >
                     {skill}
                   </Badge>
