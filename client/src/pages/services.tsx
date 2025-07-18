@@ -245,7 +245,7 @@ export default function Services() {
     <div className="min-h-screen bg-slate-900">
       <Header />
       <div className="pt-20">
-      <div className="container mx-auto px-6">
+        <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -370,7 +370,7 @@ export default function Services() {
                   rotateX: 5,
                   transition: { duration: 0.3, ease: "easeOut" }
                 }}
-                className="glass-effect p-6 rounded-2xl transition-all duration-300 cursor-pointer hover:shadow-2xl"
+                className="glass-effect p-6 rounded-2xl transition-all duration-300 cursor-pointer hover:shadow-2xl h-[400px] flex flex-col"
                 style={{
                   transformStyle: 'preserve-3d'
                 }}
@@ -381,7 +381,7 @@ export default function Services() {
                 </div>
                 
                 <h3 className="text-xl font-bold text-center mb-2 text-slate-300">{pkg.title}</h3>
-                <p className="text-slate-400 text-sm text-center mb-4">{pkg.description}</p>
+                <p className="text-slate-400 text-sm text-center mb-4 flex-shrink-0">{pkg.description}</p>
                 
                 <div className="text-center mb-4">
                   <span className="text-3xl font-bold" style={{ color: pkg.color }}>
@@ -390,7 +390,7 @@ export default function Services() {
                   <span className="text-slate-400 text-sm ml-1">/month</span>
                 </div>
                 
-                <ul className="space-y-2 mb-6">
+                <ul className="space-y-2 mb-6 flex-grow">
                   {pkg.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start space-x-2 text-sm">
                       <Check className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
@@ -401,7 +401,7 @@ export default function Services() {
                 
                 <Button
                   onClick={() => handleBuyService(pkg.title)}
-                  className="w-full"
+                  className="w-full mt-auto"
                   style={{ backgroundColor: pkg.color }}
                 >
                   <MessageCircle className="w-4 h-4 mr-2" />
@@ -532,6 +532,7 @@ export default function Services() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
+          className="mb-16"
         >
           <h2 className="text-3xl font-bold text-center mb-8 text-green-primary">Premium Monthly Packages</h2>
           <div className="grid lg:grid-cols-3 gap-8">
@@ -547,7 +548,7 @@ export default function Services() {
                   transition: { duration: 0.4, ease: "easeOut" }
                 }}
                 transition={{ delay: 0.1 * index }}
-                className={`glass-effect p-8 rounded-2xl relative transition-all duration-300 cursor-pointer hover:shadow-3xl ${
+                className={`glass-effect p-8 rounded-2xl relative transition-all duration-300 cursor-pointer hover:shadow-3xl h-[520px] flex flex-col ${
                   pkg.popular ? 'ring-2 ring-green-primary hover:ring-green-400' : 'hover:shadow-2xl'
                 }`}
                 style={{
@@ -569,7 +570,7 @@ export default function Services() {
                 </div>
                 
                 <h3 className="text-2xl font-bold text-center mb-3 text-slate-300">{pkg.title}</h3>
-                <p className="text-slate-400 text-center mb-6">{pkg.description}</p>
+                <p className="text-slate-400 text-center mb-6 flex-shrink-0">{pkg.description}</p>
                 
                 <div className="text-center mb-6">
                   {pkg.originalPrice && (
@@ -583,7 +584,7 @@ export default function Services() {
                   <span className="text-slate-400 text-sm ml-1">/month</span>
                 </div>
                 
-                <ul className="space-y-3 mb-8">
+                <ul className="space-y-3 mb-8 flex-grow">
                   {pkg.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start space-x-3">
                       <Check className="w-4 h-4 text-green-500 mt-1 flex-shrink-0" />
@@ -594,7 +595,7 @@ export default function Services() {
                 
                 <Button
                   onClick={() => handleBuyService(pkg.title)}
-                  className="w-full py-3 text-lg"
+                  className="w-full py-3 text-lg mt-auto"
                   style={{ backgroundColor: pkg.color }}
                 >
                   <MessageCircle className="w-5 h-5 mr-2" />
