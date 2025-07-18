@@ -93,7 +93,7 @@ export default function Services() {
           </div>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16 items-stretch">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {services.map((service, index) => (
             <motion.div
               key={service.id}
@@ -102,11 +102,11 @@ export default function Services() {
               viewport={{ once: true }}
               transition={{ delay: 0.1 * index }}
               whileHover={{ 
-                scale: 1.08, 
-                y: -8,
+                scale: 1.05, 
+                y: -5,
                 transition: { duration: 0.2, ease: "easeOut" }
               }}
-              className={`glass-effect p-6 rounded-2xl transition-all duration-300 relative cursor-pointer hover:shadow-2xl ${
+              className={`glass-effect p-6 rounded-2xl transition-all duration-300 relative cursor-pointer hover:shadow-2xl h-[480px] flex flex-col ${
                 service.popular ? 'ring-2 ring-green-primary hover:ring-green-400' : 'hover:shadow-lg'
               }`}
               style={{
@@ -122,37 +122,39 @@ export default function Services() {
                 </div>
               )}
               
-              <div className="flex items-center justify-center w-12 h-12 rounded-full mb-4 mx-auto"
-                   style={{ backgroundColor: `${service.color}20` }}>
-                <service.icon className="w-6 h-6" style={{ color: service.color }} />
+              <div className="flex flex-col h-full">
+                <div className="flex items-center justify-center w-14 h-14 rounded-full mb-6 mx-auto"
+                     style={{ backgroundColor: `${service.color}20` }}>
+                  <service.icon className="w-7 h-7" style={{ color: service.color }} />
+                </div>
+                
+                <h3 className="text-xl font-bold text-center mb-3 text-slate-300">{service.title}</h3>
+                <p className="text-slate-400 text-sm text-center mb-6 flex-shrink-0">{service.description}</p>
+                
+                <div className="text-center mb-6">
+                  <span className="text-3xl font-bold" style={{ color: service.color }}>
+                    {formatPrice(service.price)}
+                  </span>
+                  <span className="text-slate-400 text-sm ml-1">/month</span>
+                </div>
+                
+                <ul className="space-y-3 mb-8 flex-grow">
+                  {service.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-start space-x-3 text-sm">
+                      <Check className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+                      <span className="text-slate-400">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                
+                <Button
+                  asChild
+                  className="w-full mt-auto"
+                  style={{ backgroundColor: service.color }}
+                >
+                  <Link href="/services#professional-services">View Details</Link>
+                </Button>
               </div>
-              
-              <h3 className="text-xl font-bold text-center mb-2 text-slate-300">{service.title}</h3>
-              <p className="text-slate-400 text-sm text-center mb-4">{service.description}</p>
-              
-              <div className="text-center mb-4">
-                <span className="text-2xl font-bold" style={{ color: service.color }}>
-                  {formatPrice(service.price)}
-                </span>
-                <span className="text-slate-400 text-sm ml-1">/month</span>
-              </div>
-              
-              <ul className="space-y-2 mb-6">
-                {service.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-start space-x-2 text-sm">
-                    <Check className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
-                    <span className="text-slate-400">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-              
-              <Button
-                asChild
-                className="w-full"
-                style={{ backgroundColor: service.color }}
-              >
-                <Link href="/services#professional-services">View Details</Link>
-              </Button>
             </motion.div>
           ))}
         </div>
