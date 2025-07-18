@@ -237,12 +237,12 @@ export default function Skills() {
           </div>
         </motion.div>
 
-        <div className="grid lg:grid-cols-3 gap-6 items-stretch">
+        <div className="grid lg:grid-cols-3 gap-8 items-stretch">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="glass-effect p-6 rounded-2xl h-[400px] flex flex-col overflow-hidden"
+            className="glass-effect p-8 rounded-2xl h-[480px] flex flex-col overflow-hidden"
           >
             <h3 className="text-2xl font-bold text-green-primary mb-6 flex-shrink-0">Programming Languages</h3>
             <div className="flex flex-wrap gap-2 flex-1 content-start">
@@ -283,7 +283,7 @@ export default function Skills() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="glass-effect p-6 rounded-2xl h-[400px] flex flex-col overflow-hidden"
+            className="glass-effect p-8 rounded-2xl h-[480px] flex flex-col overflow-hidden"
           >
             <h3 className="text-2xl font-bold text-green-primary mb-6 flex-shrink-0">Backend & Tools</h3>
             <div className="flex flex-wrap gap-2 flex-1 content-start">
@@ -312,7 +312,7 @@ export default function Skills() {
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="glass-effect p-6 rounded-2xl h-[400px] flex flex-col overflow-hidden"
+            className="glass-effect p-8 rounded-2xl h-[480px] flex flex-col overflow-hidden"
           >
             <h3 className="text-2xl font-bold text-green-primary mb-6 flex-shrink-0">Management Skills</h3>
             <div className="flex flex-wrap gap-2 flex-1 content-start">
