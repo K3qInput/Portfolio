@@ -401,7 +401,7 @@ export default function Services() {
                 
                 <Button
                   onClick={() => handleBuyService(pkg.title)}
-                  className="w-full mt-auto py-2"
+                  className="w-full mt-auto py-3 text-sm font-semibold"
                   style={{ backgroundColor: pkg.color }}
                 >
                   <MessageCircle className="w-4 h-4 mr-2" />
@@ -458,7 +458,7 @@ export default function Services() {
                   
                   <Button
                     onClick={() => handleBuyService(pkg.title)}
-                    className="w-full py-3 text-lg mt-auto"
+                    className="w-full py-3 text-lg mt-auto font-semibold"
                     style={{ backgroundColor: pkg.color }}
                   >
                     <MessageCircle className="w-5 h-5 mr-2" />
@@ -514,7 +514,7 @@ export default function Services() {
                     
                     <Button
                       onClick={() => handleBuyService(pkg.title)}
-                      className="w-full py-3 text-lg"
+                      className="w-full py-3 text-lg font-semibold"
                       style={{ backgroundColor: pkg.color }}
                     >
                       <MessageCircle className="w-5 h-5 mr-2" />
@@ -595,11 +595,11 @@ export default function Services() {
                 
                 <Button
                   onClick={() => handleBuyService(pkg.title)}
-                  className="w-full py-3 text-lg mt-auto"
+                  className="w-full py-3 text-lg mt-auto font-semibold"
                   style={{ backgroundColor: pkg.color }}
                 >
                   <MessageCircle className="w-5 h-5 mr-2" />
-                  Start Monthly Service
+                  Contact for Service
                 </Button>
               </motion.div>
             ))}
