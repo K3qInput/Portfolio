@@ -9,6 +9,7 @@ export default function Skills() {
   const programmingRef = useRef<HTMLDivElement>(null);
   const backendRef = useRef<HTMLDivElement>(null);
   const managementRef = useRef<HTMLDivElement>(null);
+  const intervalRefs = useRef<NodeJS.Timeout[]>([]);
 
   const programmingLanguages = [
     "JavaScript", "Python", "Java", "Lua", "HTML", "CSS", 
@@ -57,39 +58,51 @@ export default function Skills() {
 
   // Auto-scroll animation for skills sections
   useEffect(() => {
+    // Clear any existing intervals
+    intervalRefs.current.forEach(interval => clearInterval(interval));
+    intervalRefs.current = [];
+
     if (isVisible) {
       const scrollElements = [programmingRef.current, backendRef.current, managementRef.current];
       
       scrollElements.forEach((element, index) => {
         if (element) {
-          const startDelay = 1000 + (index * 500); // Start after 1s, stagger by 0.5s
-          const scrollAnimation = () => {
-            const maxScroll = element.scrollHeight - element.clientHeight;
-            if (maxScroll > 0) {
-              let currentScroll = 0;
-              const scrollStep = maxScroll / 60; // Divide scroll into 60 steps for faster movement
-              
-              const scrollInterval = setInterval(() => {
-                currentScroll += scrollStep;
-                element.scrollTop = currentScroll;
-                
-                if (currentScroll >= maxScroll) {
-                  clearInterval(scrollInterval);
-                  // Reset scroll after a pause
-                  setTimeout(() => {
-                    element.scrollTop = 0;
-                    // Restart the animation after reset
-                    setTimeout(scrollAnimation, 500);
-                  }, 1000);
-                }
-              }, 30); // Faster 30ms intervals
-            }
-          };
+          const startDelay = 1000 + (index * 500);
           
-          setTimeout(scrollAnimation, startDelay);
+          const timeoutId = setTimeout(() => {
+            const scrollAnimation = () => {
+              const maxScroll = element.scrollHeight - element.clientHeight;
+              if (maxScroll > 0) {
+                let currentScroll = 0;
+                const scrollStep = maxScroll / 50;
+                
+                const scrollInterval = setInterval(() => {
+                  currentScroll += scrollStep;
+                  element.scrollTop = currentScroll;
+                  
+                  if (currentScroll >= maxScroll) {
+                    clearInterval(scrollInterval);
+                    setTimeout(() => {
+                      element.scrollTop = 0;
+                      setTimeout(scrollAnimation, 500);
+                    }, 1500);
+                  }
+                }, 40);
+                
+                intervalRefs.current.push(scrollInterval);
+              }
+            };
+            
+            scrollAnimation();
+          }, startDelay);
         }
       });
     }
+
+    return () => {
+      intervalRefs.current.forEach(interval => clearInterval(interval));
+      intervalRefs.current = [];
+    };
   }, [isVisible]);
 
   return (
