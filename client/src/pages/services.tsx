@@ -357,7 +357,7 @@ export default function Services() {
           <h2 className="text-3xl font-bold text-center mb-8 text-green-primary">Essential Monthly Services</h2>
           
           {/* First row - Basic services in a 4-column grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             {servicePackages.filter(pkg => pkg.category === "monthly" && !pkg.popular && pkg.id !== 8 && pkg.id !== 9 && pkg.id !== 10).map((pkg, index) => (
               <motion.div
                 key={pkg.id}
@@ -412,7 +412,7 @@ export default function Services() {
           </div>
 
           {/* Custom layout for Dev Pack, Web Dev, and Custom Solutions */}
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-4xl mx-auto mt-16">
             {/* Top row - Dev Pack and Web Dev side by side */}
             <div className="grid md:grid-cols-2 gap-8 mb-8">
               {servicePackages.filter(pkg => pkg.id === 8 || pkg.id === 9).map((pkg, index) => (
