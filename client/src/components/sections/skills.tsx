@@ -242,7 +242,7 @@ export default function Skills() {
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="glass-effect p-8 rounded-2xl h-[480px] flex flex-col overflow-hidden"
+            className="glass-effect p-6 rounded-2xl h-[400px] flex flex-col"
           >
             <h3 className="text-2xl font-bold text-green-primary mb-6 flex-shrink-0">Programming Languages</h3>
             <div className="flex flex-wrap gap-2 flex-1 content-start">
@@ -283,10 +283,10 @@ export default function Skills() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="glass-effect p-8 rounded-2xl h-[480px] flex flex-col overflow-hidden"
+            className="glass-effect p-6 rounded-2xl h-[400px] flex flex-col"
           >
             <h3 className="text-2xl font-bold text-green-primary mb-6 flex-shrink-0">Backend & Tools</h3>
-            <div className="grid grid-cols-3 gap-3 flex-1 content-start">
+            <div className="flex flex-wrap gap-2 flex-1 content-start">
               {backendTools.map((tool, index) => (
                 <motion.div
                   key={tool}
@@ -299,7 +299,7 @@ export default function Skills() {
                 >
                   <Badge 
                     variant="secondary" 
-                    className="w-full px-2 py-1 text-xs bg-gradient-to-r from-blue-500/20 to-blue-500/10 text-blue-400 border border-blue-500/30 hover:bg-blue-500/20 transition-all duration-300 shadow-lg hover:shadow-blue-500/20 text-center"
+                    className="px-3 py-1 text-sm bg-gradient-to-r from-blue-500/20 to-blue-500/10 text-blue-400 border border-blue-500/30 hover:bg-blue-500/20 transition-all duration-300 shadow-lg hover:shadow-blue-500/20"
                   >
                     {tool}
                   </Badge>
@@ -312,10 +312,10 @@ export default function Skills() {
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="glass-effect p-8 rounded-2xl h-[480px] flex flex-col overflow-hidden"
+            className="glass-effect p-6 rounded-2xl h-[400px] flex flex-col"
           >
             <h3 className="text-2xl font-bold text-green-primary mb-6 flex-shrink-0">Management Skills</h3>
-            <div className="grid grid-cols-3 gap-3 flex-1 content-start">
+            <div className="flex flex-wrap gap-2 flex-1 content-start">
               {managementSkills.map((skill, index) => (
                 <motion.div
                   key={skill}
@@ -328,7 +328,7 @@ export default function Skills() {
                 >
                   <Badge 
                     variant="secondary" 
-                    className="w-full px-2 py-1 text-xs bg-gradient-to-r from-purple-500/20 to-purple-500/10 text-purple-400 border border-purple-500/30 hover:bg-purple-500/20 transition-all duration-300 shadow-lg hover:shadow-purple-500/20 text-center"
+                    className="px-3 py-1 text-sm bg-gradient-to-r from-purple-500/20 to-purple-500/10 text-purple-400 border border-purple-500/30 hover:bg-purple-500/20 transition-all duration-300 shadow-lg hover:shadow-purple-500/20"
                   >
                     {skill}
                   </Badge>
