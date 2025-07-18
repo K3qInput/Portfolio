@@ -62,12 +62,12 @@ export default function Skills() {
       
       scrollElements.forEach((element, index) => {
         if (element) {
-          const startDelay = 2000 + (index * 1000); // Start after 2s, stagger by 1s
+          const startDelay = 1000 + (index * 500); // Start after 1s, stagger by 0.5s
           const scrollAnimation = () => {
             const maxScroll = element.scrollHeight - element.clientHeight;
             if (maxScroll > 0) {
               let currentScroll = 0;
-              const scrollStep = maxScroll / 100; // Divide scroll into 100 steps
+              const scrollStep = maxScroll / 60; // Divide scroll into 60 steps for faster movement
               
               const scrollInterval = setInterval(() => {
                 currentScroll += scrollStep;
@@ -79,10 +79,10 @@ export default function Skills() {
                   setTimeout(() => {
                     element.scrollTop = 0;
                     // Restart the animation after reset
-                    setTimeout(scrollAnimation, 1000);
-                  }, 2000);
+                    setTimeout(scrollAnimation, 500);
+                  }, 1000);
                 }
-              }, 50); // Smooth 50ms intervals
+              }, 30); // Faster 30ms intervals
             }
           };
           
