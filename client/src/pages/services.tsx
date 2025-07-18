@@ -175,24 +175,6 @@ export default function Services() {
     },
     {
       id: 9,
-      title: "Web Development",
-      description: "Professional web development and design services",
-      price: 24,
-      currency: "USD",
-      features: [
-        "Custom website development",
-        "Responsive design",
-        "Database integration",
-        "SEO optimization",
-        "Performance optimization",
-        "Ongoing maintenance"
-      ],
-      category: "monthly",
-      icon: Globe,
-      color: "#06b6d4"
-    },
-    {
-      id: 10,
       title: "Custom Solutions",
       description: "Tailored monthly package for unique server requirements",
       price: 24,
@@ -208,6 +190,24 @@ export default function Services() {
       category: "monthly",
       icon: Settings,
       color: "#f59e0b"
+    },
+    {
+      id: 10,
+      title: "Web Development",
+      description: "Professional web development and design services",
+      price: 24,
+      currency: "USD",
+      features: [
+        "Custom website development",
+        "Responsive design",
+        "Database integration",
+        "SEO optimization",
+        "Performance optimization",
+        "Ongoing maintenance"
+      ],
+      category: "monthly",
+      icon: Globe,
+      color: "#06b6d4"
     },
     {
       id: 11,
