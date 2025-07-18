@@ -10,6 +10,11 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
+- **Added Peak Minds Developer & Fixed Skills Section Tag Display** - July 18, 2025
+  - Added Peak Minds Developer (2025) current position to experience timeline
+  - Fixed skills section tag cutting issues with scrollable containers (max-h-[380px])
+  - Enhanced tag display in Backend & Tools, Management Skills, and Programming Languages
+  - All skill tags now accessible through scroll within each section container
 - **Enhanced Premium Monthly Packages & Added Network Manager Experience** - July 18, 2025
   - Improved Premium Monthly Pack spacing with responsive grid (gap-12, max-w-6xl)
   - Enhanced "Most Popular" badge with bright gradient, animation, and better visibility

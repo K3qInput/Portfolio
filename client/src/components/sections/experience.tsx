@@ -24,6 +24,15 @@ export default function ExperienceSection() {
     },
     {
       id: 3,
+      title: "Developer",
+      company: "Peak Minds",
+      period: "2025",
+      description: "Contributing to innovative development projects and technical solutions. Working on cutting-edge applications and system implementations.",
+      technologies: ["Development", "Innovation", "Systems"],
+      type: "current"
+    },
+    {
+      id: 4,
       title: "Chief Executive Officer",
       company: "Qloxhost, NicxoxNodes",
       period: "2022 - 2023",
@@ -32,7 +41,7 @@ export default function ExperienceSection() {
       type: "past"
     },
     {
-      id: 4,
+      id: 5,
       title: "Network Manager",
       company: "BoigaSMP",
       period: "2024 - 2025",
@@ -41,7 +50,7 @@ export default function ExperienceSection() {
       type: "current"
     },
     {
-      id: 5,
+      id: 6,
       title: "Network Manager",
       company: "BoltMC",
       period: "2023 - 2024",
@@ -50,7 +59,7 @@ export default function ExperienceSection() {
       type: "past"
     },
     {
-      id: 6,
+      id: 7,
       title: "Developer & Staff",
       company: "Various Minecraft Networks",
       period: "2020 - 2022",
