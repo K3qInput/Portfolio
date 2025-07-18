@@ -237,15 +237,15 @@ export default function Skills() {
           </div>
         </motion.div>
 
-        <div className="grid lg:grid-cols-3 gap-6 items-start">
+        <div className="grid lg:grid-cols-3 gap-6 items-stretch">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="glass-effect p-6 rounded-2xl min-h-[280px]"
+            className="glass-effect p-6 rounded-2xl h-[350px] flex flex-col"
           >
-            <h3 className="text-2xl font-bold text-green-primary mb-6">Programming Languages</h3>
-            <div className="flex flex-wrap gap-2">
+            <h3 className="text-2xl font-bold text-green-primary mb-6 flex-shrink-0">Programming Languages</h3>
+            <div className="flex flex-wrap gap-2 flex-1 overflow-y-auto content-start">
               {programmingLanguages.map((lang, index) => {
                 const colors = [
                   { bg: "from-yellow-500/20 to-yellow-500/10", text: "text-yellow-400", border: "border-yellow-500/30", shadow: "hover:shadow-yellow-500/20" },
@@ -283,10 +283,10 @@ export default function Skills() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="glass-effect p-6 rounded-2xl min-h-[280px]"
+            className="glass-effect p-6 rounded-2xl h-[350px] flex flex-col"
           >
-            <h3 className="text-2xl font-bold text-green-primary mb-6">Backend & Tools</h3>
-            <div className="flex flex-wrap gap-2">
+            <h3 className="text-2xl font-bold text-green-primary mb-6 flex-shrink-0">Backend & Tools</h3>
+            <div className="flex flex-wrap gap-2 flex-1 overflow-y-auto content-start">
               {backendTools.map((tool, index) => (
                 <motion.div
                   key={tool}
@@ -312,10 +312,10 @@ export default function Skills() {
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="glass-effect p-6 rounded-2xl min-h-[280px]"
+            className="glass-effect p-6 rounded-2xl h-[350px] flex flex-col"
           >
-            <h3 className="text-2xl font-bold text-green-primary mb-6">Management Skills</h3>
-            <div className="flex flex-wrap gap-2">
+            <h3 className="text-2xl font-bold text-green-primary mb-6 flex-shrink-0">Management Skills</h3>
+            <div className="flex flex-wrap gap-2 flex-1 overflow-y-auto content-start">
               {managementSkills.map((skill, index) => (
                 <motion.div
                   key={skill}
