@@ -370,7 +370,7 @@ export default function Services() {
                   rotateX: 5,
                   transition: { duration: 0.3, ease: "easeOut" }
                 }}
-                className="glass-effect p-6 rounded-2xl transition-all duration-300 cursor-pointer hover:shadow-2xl h-[400px] flex flex-col"
+                className="glass-effect p-6 rounded-2xl transition-all duration-300 cursor-pointer hover:shadow-2xl h-[480px] flex flex-col"
                 style={{
                   transformStyle: 'preserve-3d'
                 }}
@@ -380,7 +380,7 @@ export default function Services() {
                   <pkg.icon className="w-6 h-6" style={{ color: pkg.color }} />
                 </div>
                 
-                <h3 className="text-xl font-bold text-center mb-2 text-slate-300">{pkg.title}</h3>
+                <h3 className="text-xl font-bold text-center mb-3 text-slate-300">{pkg.title}</h3>
                 <p className="text-slate-400 text-sm text-center mb-4 flex-shrink-0">{pkg.description}</p>
                 
                 <div className="text-center mb-4">
@@ -401,7 +401,7 @@ export default function Services() {
                 
                 <Button
                   onClick={() => handleBuyService(pkg.title)}
-                  className="w-full mt-auto"
+                  className="w-full mt-auto py-2"
                   style={{ backgroundColor: pkg.color }}
                 >
                   <MessageCircle className="w-4 h-4 mr-2" />
