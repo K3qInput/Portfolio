@@ -73,11 +73,11 @@ export default function Header() {
       }`}
     >
       <div className="px-6 py-4">
-        <nav className="container mx-auto flex items-center justify-between">
+        <nav className="flex items-center justify-between max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="gradient-text text-2xl font-bold cursor-pointer flex-shrink-0"
+            className="gradient-text text-2xl font-bold cursor-pointer"
             onClick={() => scrollToSection("home")}
           >
             KiroDev
@@ -85,7 +85,7 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           {!isMobile && (
-            <div className="flex items-center space-x-6 flex-1 justify-center">
+            <div className="flex items-center space-x-6 flex-1 justify-end">
               {navItems.map((item, index) => (
                 <motion.button
                   key={item.id}
