@@ -29,7 +29,7 @@ export default function Testing() {
       ip: "sg-std-1.sryzen.cloud:25587",
       description: "Test our advanced anti-cheat configurations and security implementations in a controlled environment.",
       features: [
-        "Matrix Anti-Cheat",
+        "Grim Anti-Cheat",
         "Custom Configurations",
         "Real-time Detection",
         "Security Monitoring",

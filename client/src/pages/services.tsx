@@ -305,11 +305,75 @@ export default function Services() {
           </div>
         </motion.div>
 
-        {/* Essential Monthly Services */}
+        {/* One-Time Setup Services */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
+          className="mb-16"
+        >
+          <h2 className="text-3xl font-bold text-center mb-8 text-green-primary">One-Time Setup Services</h2>
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {servicePackages.filter(pkg => pkg.category === "one-time").map((pkg, index) => (
+              <motion.div
+                key={pkg.id}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 * index }}
+                whileHover={{ 
+                  scale: 1.05, 
+                  y: -12,
+                  transition: { duration: 0.3, ease: "easeOut" }
+                }}
+                className="glass-effect p-8 rounded-2xl transition-all duration-300 cursor-pointer hover:shadow-2xl border-2 border-green-500/20 hover:border-green-500/40"
+              >
+                <div className="flex items-center justify-between mb-6">
+                  <div className="flex items-center space-x-4">
+                    <div className="flex items-center justify-center w-12 h-12 rounded-full"
+                         style={{ backgroundColor: `${pkg.color}20` }}>
+                      <pkg.icon className="w-6 h-6" style={{ color: pkg.color }} />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white">{pkg.title}</h3>
+                      <p className="text-slate-400 text-sm">One-time setup</p>
+                    </div>
+                  </div>
+                  <div className="text-right">
+                    <span className="text-3xl font-bold" style={{ color: pkg.color }}>
+                      {formatPrice(pkg.price)}
+                    </span>
+                  </div>
+                </div>
+                
+                <p className="text-slate-400 mb-6">{pkg.description}</p>
+                
+                <ul className="space-y-2 mb-6">
+                  {pkg.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-start space-x-2">
+                      <Check className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+                      <span className="text-slate-300">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                
+                <Button
+                  onClick={() => handleBuyService(pkg.title)}
+                  className="w-full"
+                  style={{ backgroundColor: pkg.color }}
+                >
+                  <MessageCircle className="w-4 h-4 mr-2" />
+                  Contact for Service
+                </Button>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Essential Monthly Services */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4 }}
           className="mb-16"
         >
           <h2 className="text-3xl font-bold text-center mb-8 text-green-primary">Essential Monthly Services</h2>
@@ -372,7 +436,7 @@ export default function Services() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
+          transition={{ delay: 0.6 }}
         >
           <h2 className="text-3xl font-bold text-center mb-8 text-green-primary">Premium Monthly Packages</h2>
           <div className="grid lg:grid-cols-3 gap-8">
