@@ -237,15 +237,15 @@ export default function Skills() {
           </div>
         </motion.div>
 
-        <div className="grid lg:grid-cols-3 gap-12">
+        <div className="grid lg:grid-cols-3 gap-12 items-start">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="glass-effect p-8 rounded-2xl h-[500px] flex flex-col"
+            className="glass-effect p-8 rounded-2xl min-h-[500px]"
           >
             <h3 className="text-2xl font-bold text-green-primary mb-8">Programming Languages</h3>
-            <div className="flex flex-wrap gap-3 flex-1 content-start">
+            <div className="flex flex-wrap gap-3">
               {programmingLanguages.map((lang, index) => {
                 const colors = [
                   { bg: "from-yellow-500/20 to-yellow-500/10", text: "text-yellow-400", border: "border-yellow-500/30", shadow: "hover:shadow-yellow-500/20" },
@@ -283,10 +283,10 @@ export default function Skills() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="glass-effect p-8 rounded-2xl h-[500px] flex flex-col"
+            className="glass-effect p-8 rounded-2xl min-h-[500px]"
           >
             <h3 className="text-2xl font-bold text-green-primary mb-8">Backend & Tools</h3>
-            <div className="flex flex-wrap gap-3 flex-1 content-start">
+            <div className="flex flex-wrap gap-3">
               {backendTools.map((tool, index) => (
                 <motion.div
                   key={tool}
@@ -312,10 +312,10 @@ export default function Skills() {
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="glass-effect p-8 rounded-2xl h-[500px] flex flex-col"
+            className="glass-effect p-8 rounded-2xl min-h-[500px]"
           >
-            <h3 className="text-2xl font-bold text-green-primary mb-6">Management Skills</h3>
-            <div className="flex flex-wrap gap-3 mb-8">
+            <h3 className="text-2xl font-bold text-green-primary mb-8">Management Skills</h3>
+            <div className="flex flex-wrap gap-3">
               {managementSkills.map((skill, index) => (
                 <motion.div
                   key={skill}
@@ -332,41 +332,6 @@ export default function Skills() {
                   >
                     {skill}
                   </Badge>
-                </motion.div>
-              ))}
-            </div>
-            
-            <h4 className="text-xl font-bold text-green-primary mb-6">Core Specializations</h4>
-            <div className="space-y-4">
-              {specializations.map((skill, index) => (
-                <motion.div
-                  key={skill.name}
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="flex items-center justify-between p-4 rounded-xl bg-slate-800/50 backdrop-blur-sm border border-slate-700/50"
-                >
-                  <span className="font-medium text-slate-300">{skill.name}</span>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-20 h-3 bg-slate-700 rounded-full overflow-hidden">
-                      <motion.div
-                        initial={{ width: 0 }}
-                        animate={isVisible ? { width: `${skill.level}%` } : { width: 0 }}
-                        transition={{ delay: index * 0.1 + 0.5, duration: 1, ease: "easeOut" }}
-                        className="h-full rounded-full relative"
-                        style={{ 
-                          background: `linear-gradient(135deg, ${skill.color}, ${skill.color}80)`,
-                          boxShadow: `0 0 6px ${skill.color}60`
-                        }}
-                      >
-                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
-                      </motion.div>
-                    </div>
-                    <span className="text-sm font-bold min-w-[3rem] text-right" style={{ color: skill.color }}>
-                      {skill.level}%
-                    </span>
-                  </div>
                 </motion.div>
               ))}
             </div>
