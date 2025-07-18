@@ -401,10 +401,10 @@ export default function Services() {
                 
                 <Button
                   onClick={() => handleBuyService(pkg.title)}
-                  className="w-full mt-auto py-3 text-sm font-semibold"
+                  className="w-full mt-auto py-2 px-3 text-xs font-semibold whitespace-nowrap"
                   style={{ backgroundColor: pkg.color }}
                 >
-                  <MessageCircle className="w-4 h-4 mr-2" />
+                  <MessageCircle className="w-3 h-3 mr-1" />
                   Contact for Service
                 </Button>
               </motion.div>
@@ -458,10 +458,10 @@ export default function Services() {
                   
                   <Button
                     onClick={() => handleBuyService(pkg.title)}
-                    className="w-full py-3 text-lg mt-auto font-semibold"
+                    className="w-full py-2 px-3 text-sm mt-auto font-semibold whitespace-nowrap"
                     style={{ backgroundColor: pkg.color }}
                   >
-                    <MessageCircle className="w-5 h-5 mr-2" />
+                    <MessageCircle className="w-4 h-4 mr-1" />
                     Contact for Service
                   </Button>
                 </motion.div>
@@ -514,10 +514,10 @@ export default function Services() {
                     
                     <Button
                       onClick={() => handleBuyService(pkg.title)}
-                      className="w-full py-3 text-lg font-semibold mt-auto"
+                      className="w-full py-2 px-3 text-sm font-semibold mt-auto whitespace-nowrap"
                       style={{ backgroundColor: pkg.color }}
                     >
-                      <MessageCircle className="w-5 h-5 mr-2" />
+                      <MessageCircle className="w-4 h-4 mr-1" />
                       Contact for Service
                     </Button>
                   </motion.div>
@@ -595,10 +595,10 @@ export default function Services() {
                 
                 <Button
                   onClick={() => handleBuyService(pkg.title)}
-                  className="w-full py-3 text-lg mt-auto font-semibold"
+                  className="w-full py-2 px-3 text-sm mt-auto font-semibold whitespace-nowrap"
                   style={{ backgroundColor: pkg.color }}
                 >
-                  <MessageCircle className="w-5 h-5 mr-2" />
+                  <MessageCircle className="w-4 h-4 mr-1" />
                   Contact for Service
                 </Button>
               </motion.div>
