@@ -427,31 +427,31 @@ export default function Services() {
                     rotateX: 5,
                     transition: { duration: 0.3, ease: "easeOut" }
                   }}
-                  className="glass-effect p-8 rounded-2xl transition-all duration-300 cursor-pointer hover:shadow-2xl h-[520px] flex flex-col w-full max-w-lg mx-auto"
+                  className="glass-effect p-6 rounded-2xl transition-all duration-300 cursor-pointer hover:shadow-2xl h-[500px] flex flex-col w-full max-w-md mx-auto"
                   style={{
                     transformStyle: 'preserve-3d'
                   }}
                 >
-                  <div className="flex items-center justify-center w-16 h-16 rounded-full mb-6 mx-auto"
+                  <div className="flex items-center justify-center w-14 h-14 rounded-full mb-4 mx-auto"
                        style={{ backgroundColor: `${pkg.color}20` }}>
-                    <pkg.icon className="w-8 h-8" style={{ color: pkg.color }} />
+                    <pkg.icon className="w-7 h-7" style={{ color: pkg.color }} />
                   </div>
                   
-                  <h3 className="text-2xl font-bold text-center mb-4 text-slate-300">{pkg.title}</h3>
-                  <p className="text-slate-400 text-center mb-6 flex-shrink-0">{pkg.description}</p>
+                  <h3 className="text-xl font-bold text-center mb-3 text-slate-300">{pkg.title}</h3>
+                  <p className="text-slate-400 text-center mb-4 flex-shrink-0 text-sm">{pkg.description}</p>
                   
-                  <div className="text-center mb-6">
-                    <span className="text-4xl font-bold" style={{ color: pkg.color }}>
+                  <div className="text-center mb-4">
+                    <span className="text-3xl font-bold" style={{ color: pkg.color }}>
                       {formatPrice(pkg.price)}
                     </span>
                     <span className="text-slate-400 text-sm ml-1">/month</span>
                   </div>
                   
-                  <ul className="space-y-3 mb-8 flex-grow">
+                  <ul className="space-y-2 mb-6 flex-grow">
                     {pkg.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start space-x-3">
-                        <Check className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
-                        <span className="text-slate-400">{feature}</span>
+                      <li key={idx} className="flex items-start space-x-2">
+                        <Check className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+                        <span className="text-slate-400 text-sm">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -469,7 +469,7 @@ export default function Services() {
             </div>
 
             {/* Bottom row - Custom Solutions centered */}
-            <div className="flex justify-center mt-12">
+            <div className="flex justify-center mt-16">
               <div className="max-w-lg w-full">
                 {servicePackages.filter(pkg => pkg.id === 10).map((pkg, index) => (
                   <motion.div
@@ -483,7 +483,7 @@ export default function Services() {
                       rotateX: 5,
                       transition: { duration: 0.3, ease: "easeOut" }
                     }}
-                    className="glass-effect p-8 rounded-2xl transition-all duration-300 cursor-pointer hover:shadow-2xl h-[520px] flex flex-col"
+                    className="glass-effect p-6 rounded-2xl transition-all duration-300 cursor-pointer hover:shadow-2xl h-[500px] flex flex-col w-full max-w-md mx-auto"
                     style={{
                       transformStyle: 'preserve-3d'
                     }}
