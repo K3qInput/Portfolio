@@ -425,7 +425,7 @@ export default function Services() {
                     rotateX: 5,
                     transition: { duration: 0.3, ease: "easeOut" }
                   }}
-                  className="glass-effect p-8 rounded-2xl transition-all duration-300 cursor-pointer hover:shadow-2xl"
+                  className="glass-effect p-8 rounded-2xl transition-all duration-300 cursor-pointer hover:shadow-2xl h-[520px] flex flex-col"
                   style={{
                     transformStyle: 'preserve-3d'
                   }}
@@ -436,7 +436,7 @@ export default function Services() {
                   </div>
                   
                   <h3 className="text-2xl font-bold text-center mb-4 text-slate-300">{pkg.title}</h3>
-                  <p className="text-slate-400 text-center mb-6">{pkg.description}</p>
+                  <p className="text-slate-400 text-center mb-6 flex-shrink-0">{pkg.description}</p>
                   
                   <div className="text-center mb-6">
                     <span className="text-4xl font-bold" style={{ color: pkg.color }}>
@@ -445,7 +445,7 @@ export default function Services() {
                     <span className="text-slate-400 text-sm ml-1">/month</span>
                   </div>
                   
-                  <ul className="space-y-3 mb-8">
+                  <ul className="space-y-3 mb-8 flex-grow">
                     {pkg.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start space-x-3">
                         <Check className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
@@ -456,7 +456,7 @@ export default function Services() {
                   
                   <Button
                     onClick={() => handleBuyService(pkg.title)}
-                    className="w-full py-3 text-lg"
+                    className="w-full py-3 text-lg mt-auto"
                     style={{ backgroundColor: pkg.color }}
                   >
                     <MessageCircle className="w-5 h-5 mr-2" />
