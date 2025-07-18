@@ -279,7 +279,6 @@ export default function Skills() {
               })}
               </div>
               <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-slate-800/80 to-transparent pointer-events-none"></div>
-              <div className="absolute bottom-2 right-4 text-slate-400 text-xs opacity-60">scroll for more</div>
             </div>
           </motion.div>
 
@@ -312,7 +311,7 @@ export default function Skills() {
               ))}
               </div>
               <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-slate-800/80 to-transparent pointer-events-none"></div>
-              <div className="absolute bottom-2 right-4 text-slate-400 text-xs opacity-60">scroll for more</div>
+              <div className="absolute bottom-2 right-4 text-slate-200 text-sm font-medium">scroll for more</div>
             </div>
           </motion.div>
 
@@ -345,7 +344,7 @@ export default function Skills() {
               ))}
               </div>
               <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-slate-800/80 to-transparent pointer-events-none"></div>
-              <div className="absolute bottom-2 right-4 text-slate-400 text-xs opacity-60">scroll for more</div>
+              <div className="absolute bottom-2 right-4 text-slate-200 text-sm font-medium">scroll for more</div>
             </div>
           </motion.div>
         </div>
