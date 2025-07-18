@@ -412,9 +412,9 @@ export default function Services() {
           </div>
 
           {/* Custom layout for Dev Pack, Web Dev, and Custom Solutions */}
-          <div className="max-w-4xl mx-auto mt-24">
+          <div className="max-w-6xl mx-auto mt-24">
             {/* Top row - Dev Pack and Web Dev side by side */}
-            <div className="grid md:grid-cols-2 gap-8 mb-16">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
               {servicePackages.filter(pkg => pkg.id === 8 || pkg.id === 9).map((pkg, index) => (
                 <motion.div
                   key={pkg.id}
@@ -427,7 +427,7 @@ export default function Services() {
                     rotateX: 5,
                     transition: { duration: 0.3, ease: "easeOut" }
                   }}
-                  className="glass-effect p-8 rounded-2xl transition-all duration-300 cursor-pointer hover:shadow-2xl h-[520px] flex flex-col"
+                  className="glass-effect p-8 rounded-2xl transition-all duration-300 cursor-pointer hover:shadow-2xl h-[520px] flex flex-col w-full max-w-lg mx-auto"
                   style={{
                     transformStyle: 'preserve-3d'
                   }}
@@ -470,7 +470,7 @@ export default function Services() {
 
             {/* Bottom row - Custom Solutions centered */}
             <div className="flex justify-center mt-12">
-              <div className="max-w-md w-full">
+              <div className="max-w-lg w-full">
                 {servicePackages.filter(pkg => pkg.id === 10).map((pkg, index) => (
                   <motion.div
                     key={pkg.id}
@@ -483,7 +483,7 @@ export default function Services() {
                       rotateX: 5,
                       transition: { duration: 0.3, ease: "easeOut" }
                     }}
-                    className="glass-effect p-8 rounded-2xl transition-all duration-300 cursor-pointer hover:shadow-2xl"
+                    className="glass-effect p-8 rounded-2xl transition-all duration-300 cursor-pointer hover:shadow-2xl h-[520px] flex flex-col"
                     style={{
                       transformStyle: 'preserve-3d'
                     }}
@@ -503,7 +503,7 @@ export default function Services() {
                       <span className="text-slate-400 text-sm ml-1">/month</span>
                     </div>
                     
-                    <ul className="space-y-3 mb-8">
+                    <ul className="space-y-3 mb-8 flex-grow">
                       {pkg.features.map((feature, idx) => (
                         <li key={idx} className="flex items-start space-x-3">
                           <Check className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
@@ -514,7 +514,7 @@ export default function Services() {
                     
                     <Button
                       onClick={() => handleBuyService(pkg.title)}
-                      className="w-full py-3 text-lg font-semibold"
+                      className="w-full py-3 text-lg font-semibold mt-auto"
                       style={{ backgroundColor: pkg.color }}
                     >
                       <MessageCircle className="w-5 h-5 mr-2" />
