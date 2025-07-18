@@ -149,10 +149,13 @@ export default function Services() {
                 
                 <Button
                   asChild
-                  className="w-full mt-auto"
+                  className="w-full mt-auto py-3 text-white font-semibold hover:opacity-90 transition-all duration-300"
                   style={{ backgroundColor: service.color }}
                 >
-                  <Link href="/services#professional-services">View Details</Link>
+                  <Link href="/services#professional-services">
+                    <MessageCircle className="w-4 h-4 mr-2" />
+                    Contact for Service
+                  </Link>
                 </Button>
               </div>
             </motion.div>
