@@ -351,8 +351,10 @@ export default function Services() {
           className="mb-16"
         >
           <h2 className="text-3xl font-bold text-center mb-8 text-green-primary">Essential Monthly Services</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {servicePackages.filter(pkg => pkg.category === "monthly" && !pkg.popular).map((pkg, index) => (
+          
+          {/* First row - Basic services in a 4-column grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            {servicePackages.filter(pkg => pkg.category === "monthly" && !pkg.popular && pkg.id !== 8 && pkg.id !== 9 && pkg.id !== 10).map((pkg, index) => (
               <motion.div
                 key={pkg.id}
                 initial={{ opacity: 0, y: 30 }}
@@ -403,6 +405,121 @@ export default function Services() {
                 </Button>
               </motion.div>
             ))}
+          </div>
+
+          {/* Custom layout for Dev Pack, Web Dev, and Custom Solutions */}
+          <div className="max-w-4xl mx-auto">
+            {/* Top row - Dev Pack and Web Dev side by side */}
+            <div className="grid md:grid-cols-2 gap-8 mb-8">
+              {servicePackages.filter(pkg => pkg.id === 8 || pkg.id === 9).map((pkg, index) => (
+                <motion.div
+                  key={pkg.id}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.1 * index }}
+                  whileHover={{ 
+                    scale: 1.05, 
+                    y: -12,
+                    rotateX: 5,
+                    transition: { duration: 0.3, ease: "easeOut" }
+                  }}
+                  className="glass-effect p-8 rounded-2xl transition-all duration-300 cursor-pointer hover:shadow-2xl"
+                  style={{
+                    transformStyle: 'preserve-3d'
+                  }}
+                >
+                  <div className="flex items-center justify-center w-16 h-16 rounded-full mb-6 mx-auto"
+                       style={{ backgroundColor: `${pkg.color}20` }}>
+                    <pkg.icon className="w-8 h-8" style={{ color: pkg.color }} />
+                  </div>
+                  
+                  <h3 className="text-2xl font-bold text-center mb-4 text-slate-300">{pkg.title}</h3>
+                  <p className="text-slate-400 text-center mb-6">{pkg.description}</p>
+                  
+                  <div className="text-center mb-6">
+                    <span className="text-4xl font-bold" style={{ color: pkg.color }}>
+                      {formatPrice(pkg.price)}
+                    </span>
+                    <span className="text-slate-400 text-sm ml-1">/month</span>
+                  </div>
+                  
+                  <ul className="space-y-3 mb-8">
+                    {pkg.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-start space-x-3">
+                        <Check className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                        <span className="text-slate-400">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <Button
+                    onClick={() => handleBuyService(pkg.title)}
+                    className="w-full py-3 text-lg"
+                    style={{ backgroundColor: pkg.color }}
+                  >
+                    <MessageCircle className="w-5 h-5 mr-2" />
+                    Contact for Service
+                  </Button>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Bottom row - Custom Solutions centered */}
+            <div className="flex justify-center">
+              <div className="max-w-md w-full">
+                {servicePackages.filter(pkg => pkg.id === 10).map((pkg, index) => (
+                  <motion.div
+                    key={pkg.id}
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.3 }}
+                    whileHover={{ 
+                      scale: 1.05, 
+                      y: -12,
+                      rotateX: 5,
+                      transition: { duration: 0.3, ease: "easeOut" }
+                    }}
+                    className="glass-effect p-8 rounded-2xl transition-all duration-300 cursor-pointer hover:shadow-2xl"
+                    style={{
+                      transformStyle: 'preserve-3d'
+                    }}
+                  >
+                    <div className="flex items-center justify-center w-16 h-16 rounded-full mb-6 mx-auto"
+                         style={{ backgroundColor: `${pkg.color}20` }}>
+                      <pkg.icon className="w-8 h-8" style={{ color: pkg.color }} />
+                    </div>
+                    
+                    <h3 className="text-2xl font-bold text-center mb-4 text-slate-300">{pkg.title}</h3>
+                    <p className="text-slate-400 text-center mb-6">{pkg.description}</p>
+                    
+                    <div className="text-center mb-6">
+                      <span className="text-4xl font-bold" style={{ color: pkg.color }}>
+                        {formatPrice(pkg.price)}
+                      </span>
+                      <span className="text-slate-400 text-sm ml-1">/month</span>
+                    </div>
+                    
+                    <ul className="space-y-3 mb-8">
+                      {pkg.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-start space-x-3">
+                          <Check className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                          <span className="text-slate-400">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    
+                    <Button
+                      onClick={() => handleBuyService(pkg.title)}
+                      className="w-full py-3 text-lg"
+                      style={{ backgroundColor: pkg.color }}
+                    >
+                      <MessageCircle className="w-5 h-5 mr-2" />
+                      Contact for Service
+                    </Button>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
           </div>
         </motion.div>
 
