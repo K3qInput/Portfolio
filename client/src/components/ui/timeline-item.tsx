@@ -28,6 +28,9 @@ export default function TimelineItem({ experience, index }: TimelineItemProps) {
       "Configuration": "bg-violet-500/20 text-violet-400",
       "Linux": "bg-gray-500/20 text-gray-400",
       "Network Architecture": "bg-sky-500/20 text-sky-400",
+      "Network Management": "bg-yellow-500/20 text-yellow-400",
+      "Infrastructure": "bg-blue-500/20 text-blue-400",
+      "Administration": "bg-orange-500/20 text-orange-400",
       "Monitoring": "bg-orange-500/20 text-orange-400",
       "DDoS Protection": "bg-red-600/20 text-red-400",
     };
