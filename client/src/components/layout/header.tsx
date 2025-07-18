@@ -79,7 +79,7 @@ export default function Header() {
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="gradient-text text-2xl font-bold cursor-pointer"
+            className="gradient-text text-2xl font-bold cursor-pointer flex-shrink-0"
             onClick={() => scrollToSection("home")}
           >
             KiroDev
@@ -87,7 +87,7 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           {!isMobile && (
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-6 ml-4">
               {navItems.map((item, index) => (
                 <motion.button
                   key={item.id}
@@ -95,7 +95,7 @@ export default function Header() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
                   onClick={() => scrollToSection(item.id)}
-                  className="text-slate-300 hover:text-green-primary transition-colors duration-300 relative group text-sm"
+                  className="text-slate-300 hover:text-green-primary transition-colors duration-300 relative group whitespace-nowrap"
                 >
                   {item.label}
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-green-primary group-hover:w-full transition-all duration-300"></span>
