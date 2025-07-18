@@ -535,7 +535,7 @@ export default function Services() {
           className="mb-20 mt-20"
         >
           <h2 className="text-3xl font-bold text-center mb-8 text-green-primary">Premium Monthly Packages</h2>
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12 max-w-6xl mx-auto">
             {servicePackages.filter(pkg => pkg.category === "monthly" && pkg.popular).map((pkg, index) => (
               <motion.div
                 key={pkg.id}
