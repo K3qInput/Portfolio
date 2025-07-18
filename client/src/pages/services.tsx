@@ -245,7 +245,7 @@ export default function Services() {
     <div className="min-h-screen bg-slate-900">
       <Header />
       <div className="pt-20">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -356,8 +356,8 @@ export default function Services() {
         >
           <h2 className="text-3xl font-bold text-center mb-8 text-green-primary">Essential Monthly Services</h2>
           
-          {/* First row - Basic services in a 4-column grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-24">
+          {/* First row - Basic services in a responsive grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mb-24">
             {servicePackages.filter(pkg => pkg.category === "monthly" && !pkg.popular && pkg.id !== 8 && pkg.id !== 9 && pkg.id !== 10).map((pkg, index) => (
               <motion.div
                 key={pkg.id}
@@ -370,7 +370,7 @@ export default function Services() {
                   rotateX: 5,
                   transition: { duration: 0.3, ease: "easeOut" }
                 }}
-                className="glass-effect p-6 rounded-2xl transition-all duration-300 cursor-pointer hover:shadow-2xl h-[480px] flex flex-col"
+                className="glass-effect p-6 rounded-2xl transition-all duration-300 cursor-pointer hover:shadow-2xl h-[480px] flex flex-col w-full max-w-sm mx-auto"
                 style={{
                   transformStyle: 'preserve-3d'
                 }}
