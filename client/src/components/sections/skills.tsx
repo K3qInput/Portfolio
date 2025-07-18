@@ -1,11 +1,14 @@
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 import { Badge } from "@/components/ui/badge";
 
 export default function Skills() {
   const [ref, isVisible] = useIntersectionObserver({ threshold: 0.1 });
   const [chartAnimated, setChartAnimated] = useState(false);
+  const programmingRef = useRef<HTMLDivElement>(null);
+  const backendRef = useRef<HTMLDivElement>(null);
+  const managementRef = useRef<HTMLDivElement>(null);
 
   const programmingLanguages = [
     "JavaScript", "Python", "Java", "Lua", "HTML", "CSS", 
@@ -51,6 +54,43 @@ export default function Skills() {
       setChartAnimated(true);
     }
   }, [isVisible, chartAnimated]);
+
+  // Auto-scroll animation for skills sections
+  useEffect(() => {
+    if (isVisible) {
+      const scrollElements = [programmingRef.current, backendRef.current, managementRef.current];
+      
+      scrollElements.forEach((element, index) => {
+        if (element) {
+          const startDelay = 2000 + (index * 1000); // Start after 2s, stagger by 1s
+          const scrollAnimation = () => {
+            const maxScroll = element.scrollHeight - element.clientHeight;
+            if (maxScroll > 0) {
+              let currentScroll = 0;
+              const scrollStep = maxScroll / 100; // Divide scroll into 100 steps
+              
+              const scrollInterval = setInterval(() => {
+                currentScroll += scrollStep;
+                element.scrollTop = currentScroll;
+                
+                if (currentScroll >= maxScroll) {
+                  clearInterval(scrollInterval);
+                  // Reset scroll after a pause
+                  setTimeout(() => {
+                    element.scrollTop = 0;
+                    // Restart the animation after reset
+                    setTimeout(scrollAnimation, 1000);
+                  }, 2000);
+                }
+              }, 50); // Smooth 50ms intervals
+            }
+          };
+          
+          setTimeout(scrollAnimation, startDelay);
+        }
+      });
+    }
+  }, [isVisible]);
 
   return (
     <section id="skills" className="py-24 relative" ref={ref}>
@@ -245,7 +285,7 @@ export default function Skills() {
             className="glass-effect p-8 rounded-2xl h-[520px] flex flex-col"
           >
             <h3 className="text-2xl font-bold text-green-primary mb-6 flex-shrink-0">Programming Languages</h3>
-            <div className="flex flex-wrap gap-4 flex-1 content-start overflow-y-auto max-h-[380px] scrollbar-hide">
+            <div ref={programmingRef} className="flex flex-wrap gap-4 flex-1 content-start overflow-y-auto max-h-[380px] scrollbar-hide">
               {programmingLanguages.map((lang, index) => {
                 const colors = [
                   { bg: "from-yellow-500/20 to-yellow-500/10", text: "text-yellow-400", border: "border-yellow-500/30", shadow: "hover:shadow-yellow-500/20" },
@@ -286,7 +326,7 @@ export default function Skills() {
             className="glass-effect p-8 rounded-2xl h-[520px] flex flex-col"
           >
             <h3 className="text-2xl font-bold text-green-primary mb-6 flex-shrink-0">Backend & Tools</h3>
-            <div className="flex flex-wrap gap-3 flex-1 content-start overflow-y-auto max-h-[380px] scrollbar-hide">
+            <div ref={backendRef} className="flex flex-wrap gap-3 flex-1 content-start overflow-y-auto max-h-[380px] scrollbar-hide">
               {backendTools.map((tool, index) => (
                 <motion.div
                   key={tool}
@@ -315,7 +355,7 @@ export default function Skills() {
             className="glass-effect p-8 rounded-2xl h-[520px] flex flex-col"
           >
             <h3 className="text-2xl font-bold text-green-primary mb-6 flex-shrink-0">Management Skills</h3>
-            <div className="flex flex-wrap gap-3 flex-1 content-start overflow-y-auto max-h-[380px] scrollbar-hide">
+            <div ref={managementRef} className="flex flex-wrap gap-3 flex-1 content-start overflow-y-auto max-h-[380px] scrollbar-hide">
               {managementSkills.map((skill, index) => (
                 <motion.div
                   key={skill}
