@@ -26,7 +26,10 @@ export default function Skills() {
     "Team Leadership", "Project Management", "Resource Planning", 
     "Strategic Planning", "Performance Monitoring", "Quality Assurance",
     "Staff Training", "Chart Analysis", "Budget Management", 
-    "Financial Planning", "Cost Optimization", "Risk Assessment"
+    "Financial Planning", "Cost Optimization", "Risk Assessment",
+    "Workflow Optimization", "Client Relations", "Vendor Management",
+    "Time Management", "Goal Setting", "Process Improvement",
+    "Change Management", "Stakeholder Communication"
   ];
 
   const specializations = [
