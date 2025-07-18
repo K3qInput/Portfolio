@@ -45,12 +45,12 @@ export default function About() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-stretch">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="glass-effect p-8 rounded-2xl"
+            className="glass-effect p-8 rounded-2xl h-full flex flex-col"
           >
             <div className="flex items-start space-x-4 mb-6">
               <div className="relative">
@@ -108,7 +108,7 @@ export default function About() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="glass-effect p-8 rounded-2xl"
+            className="glass-effect p-8 rounded-2xl h-full flex flex-col"
           >
             <h3 className="text-2xl font-bold text-green-primary mb-6">Education & Background</h3>
             <div className="space-y-6">

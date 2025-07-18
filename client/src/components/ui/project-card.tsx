@@ -29,7 +29,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       viewport={{ once: true }}
       transition={{ delay: index * 0.1 }}
       whileHover={{ y: -10 }}
-      className="glass-effect p-6 rounded-2xl transition-all duration-300"
+      className="glass-effect p-6 rounded-2xl transition-all duration-300 h-[440px] flex flex-col"
     >
       <div className="relative overflow-hidden rounded-lg mb-4 group">
         <img
@@ -44,22 +44,22 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
         {project.title}
       </h3>
       
-      <p className="text-slate-400 mb-4 text-sm line-clamp-3">
+      <p className="text-slate-400 mb-4 text-sm line-clamp-3 flex-shrink-0">
         {project.description}
       </p>
 
-      <div className="flex flex-wrap gap-2 mb-4">
+      <div className="flex flex-wrap gap-2 mb-6 flex-grow">
         {project.technologies.map((tech, techIndex) => (
           <span
             key={techIndex}
-            className={`px-2 py-1 text-xs rounded ${getTechColor(tech)}`}
+            className={`px-2 py-1 text-xs rounded ${getTechColor(tech)} h-fit`}
           >
             {tech}
           </span>
         ))}
       </div>
 
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center mt-auto">
         <a
           href={project.githubUrl}
           target="_blank"

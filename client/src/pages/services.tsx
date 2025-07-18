@@ -301,43 +301,45 @@ export default function Services() {
                   rotateX: 5,
                   transition: { duration: 0.3, ease: "easeOut" }
                 }}
-                className="glass-effect p-8 rounded-2xl transition-all duration-300 cursor-pointer hover:shadow-2xl"
+                className="glass-effect p-8 rounded-2xl transition-all duration-300 cursor-pointer hover:shadow-2xl h-[560px] flex flex-col"
                 style={{
                   transformStyle: 'preserve-3d'
                 }}
               >
-                <div className="flex items-center justify-center w-16 h-16 rounded-full mb-6 mx-auto"
-                     style={{ backgroundColor: `${pkg.color}20` }}>
-                  <pkg.icon className="w-8 h-8" style={{ color: pkg.color }} />
+                <div className="flex flex-col h-full">
+                  <div className="flex items-center justify-center w-16 h-16 rounded-full mb-6 mx-auto"
+                       style={{ backgroundColor: `${pkg.color}20` }}>
+                    <pkg.icon className="w-8 h-8" style={{ color: pkg.color }} />
+                  </div>
+                  
+                  <h3 className="text-2xl font-bold text-center mb-4 text-slate-300">{pkg.title}</h3>
+                  <p className="text-slate-400 text-center mb-6 flex-shrink-0">{pkg.description}</p>
+                  
+                  <div className="text-center mb-6">
+                    <span className="text-4xl font-bold" style={{ color: pkg.color }}>
+                      {formatPrice(pkg.price)}
+                    </span>
+                    <span className="text-slate-400 text-sm ml-1">one-time</span>
+                  </div>
+                  
+                  <ul className="space-y-3 mb-8 flex-grow">
+                    {pkg.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-start space-x-3">
+                        <Check className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                        <span className="text-slate-400">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <Button
+                    onClick={() => handleBuyService(pkg.title)}
+                    className="w-full py-3 text-lg mt-auto"
+                    style={{ backgroundColor: pkg.color }}
+                  >
+                    <MessageCircle className="w-5 h-5 mr-2" />
+                    Contact for Service
+                  </Button>
                 </div>
-                
-                <h3 className="text-2xl font-bold text-center mb-4 text-slate-300">{pkg.title}</h3>
-                <p className="text-slate-400 text-center mb-6">{pkg.description}</p>
-                
-                <div className="text-center mb-6">
-                  <span className="text-4xl font-bold" style={{ color: pkg.color }}>
-                    {formatPrice(pkg.price)}
-                  </span>
-                  <span className="text-slate-400 text-sm ml-1">one-time</span>
-                </div>
-                
-                <ul className="space-y-3 mb-8">
-                  {pkg.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start space-x-3">
-                      <Check className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
-                      <span className="text-slate-400">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                
-                <Button
-                  onClick={() => handleBuyService(pkg.title)}
-                  className="w-full py-3 text-lg"
-                  style={{ backgroundColor: pkg.color }}
-                >
-                  <MessageCircle className="w-5 h-5 mr-2" />
-                  Contact for Service
-                </Button>
               </motion.div>
             ))}
           </div>

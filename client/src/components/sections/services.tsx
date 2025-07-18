@@ -106,7 +106,7 @@ export default function Services() {
                 y: -5,
                 transition: { duration: 0.2, ease: "easeOut" }
               }}
-              className={`glass-effect p-6 rounded-2xl transition-all duration-300 relative cursor-pointer hover:shadow-2xl h-[480px] flex flex-col ${
+              className={`glass-effect p-6 rounded-2xl transition-all duration-300 relative cursor-pointer hover:shadow-2xl h-[520px] flex flex-col ${
                 service.popular ? 'ring-2 ring-green-primary hover:ring-green-400' : 'hover:shadow-lg'
               }`}
               style={{
