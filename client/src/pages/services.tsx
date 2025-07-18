@@ -285,6 +285,7 @@ export default function Services() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
           className="mb-16"
+          id="one-time-services"
         >
           <h2 className="text-3xl font-bold text-center mb-8 text-green-primary">One-Time Setup Services</h2>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
