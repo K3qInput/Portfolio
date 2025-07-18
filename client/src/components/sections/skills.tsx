@@ -9,7 +9,9 @@ export default function Skills() {
 
   const programmingLanguages = [
     "JavaScript", "Python", "Java", "Lua", "HTML", "CSS", 
-    "TypeScript", "Go", "C++", "SQL", "Bash", "YAML"
+    "TypeScript", "Go", "C++", "SQL", "Bash", "YAML",
+    "PHP", "Rust", "Kotlin", "Swift", "Ruby", "Perl",
+    "Assembly", "Dockerfile"
   ];
 
   const backendTools = [
