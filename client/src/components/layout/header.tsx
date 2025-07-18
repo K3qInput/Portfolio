@@ -87,7 +87,7 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           {!isMobile && (
-            <div className="flex items-center space-x-6 mr-2">
+            <div className="flex items-center space-x-8 mr-2 flex-1 justify-center">
               {navItems.map((item, index) => (
                 <motion.button
                   key={item.id}
@@ -95,7 +95,7 @@ export default function Header() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
                   onClick={() => scrollToSection(item.id)}
-                  className="text-slate-300 hover:text-green-primary transition-colors duration-300 relative group whitespace-nowrap text-base px-2"
+                  className="text-slate-300 hover:text-green-primary transition-colors duration-300 relative group whitespace-nowrap text-lg px-3 font-medium"
                 >
                   {item.label}
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-green-primary group-hover:w-full transition-all duration-300"></span>
