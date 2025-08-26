@@ -15,7 +15,7 @@ Preferred communication style: Simple, everyday language.
   - Fixed TypeScript compilation errors and database configuration issues
   - Enhanced security with proper client/server separation
   - Application running smoothly on port 5000 with all features working
-  - Added General Manager positions: Aspire SMP (2025) and Owners Alliance (2023-2025)
+  - Added General Manager positions: Aspire SMP (2025) and Owners Alliance (2025)
   - Updated experience timeline showing progression from Mod to Admin to Manager at Owners Alliance
 - **Added Peak Minds Developer & Fixed Skills Section Tag Display** - July 18, 2025
   - Added Peak Minds Developer (2025) current position to experience timeline

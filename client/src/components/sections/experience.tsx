@@ -6,33 +6,15 @@ export default function ExperienceSection() {
   const experiences: Experience[] = [
     {
       id: 1,
-      title: "Chief Technology Officer",
-      company: "Fuzz Labs, Sryzen, Hostrium, Valex Cloud",
+      title: "General Manager",
+      company: "Owners Alliance",
       period: "2025",
-      description: "Leading technical strategy and development across multiple companies. Responsible for architecture decisions, team leadership, and innovative solution development.",
-      technologies: ["Leadership", "Strategy", "Innovation"],
+      description: "Progressed through ranks from Moderator to Administrator to General Manager. Led community management initiatives, established policies, and oversaw operational excellence.",
+      technologies: ["Leadership", "Policy Development", "Team Management"],
       type: "current"
     },
     {
       id: 2,
-      title: "Senior Developer",
-      company: "Craftsteal",
-      period: "2025",
-      description: "Developing advanced server plugins and security systems. Focus on performance optimization and anti-cheat development.",
-      technologies: ["Java", "Security", "Optimization"],
-      type: "current"
-    },
-    {
-      id: 3,
-      title: "Developer",
-      company: "Peak Minds",
-      period: "2025",
-      description: "Contributing to innovative development projects and technical solutions. Working on cutting-edge applications and system implementations.",
-      technologies: ["Development", "Innovation", "Systems"],
-      type: "current"
-    },
-    {
-      id: 8,
       title: "General Manager",
       company: "Aspire SMP",
       period: "2025",
@@ -41,25 +23,34 @@ export default function ExperienceSection() {
       type: "current"
     },
     {
-      id: 9,
-      title: "General Manager",
-      company: "Owners Alliance",
-      period: "2023 - 2025",
-      description: "Progressed through ranks from Moderator to Administrator to General Manager. Led community management initiatives, established policies, and oversaw operational excellence.",
-      technologies: ["Leadership", "Policy Development", "Team Management"],
-      type: "past"
+      id: 3,
+      title: "Chief Technology Officer",
+      company: "Fuzz Labs, Sryzen, Hostrium, Valex Cloud",
+      period: "2025",
+      description: "Leading technical strategy and development across multiple companies. Responsible for architecture decisions, team leadership, and innovative solution development.",
+      technologies: ["Leadership", "Strategy", "Innovation"],
+      type: "current"
     },
     {
       id: 4,
-      title: "Chief Executive Officer",
-      company: "Qloxhost, NicxoxNodes",
-      period: "2022 - 2023",
-      description: "Founded and led hosting companies providing scalable server solutions. Managed teams, developed business strategies, and ensured service quality.",
-      technologies: ["Entrepreneurship", "Management", "Hosting"],
-      type: "past"
+      title: "Senior Developer",
+      company: "Craftsteal",
+      period: "2025",
+      description: "Developing advanced server plugins and security systems. Focus on performance optimization and anti-cheat development.",
+      technologies: ["Java", "Security", "Optimization"],
+      type: "current"
     },
     {
       id: 5,
+      title: "Developer",
+      company: "Peak Minds",
+      period: "2025",
+      description: "Contributing to innovative development projects and technical solutions. Working on cutting-edge applications and system implementations.",
+      technologies: ["Development", "Innovation", "Systems"],
+      type: "current"
+    },
+    {
+      id: 6,
       title: "Network Manager",
       company: "BoigaSMP",
       period: "2024 - 2025",
@@ -68,7 +59,7 @@ export default function ExperienceSection() {
       type: "current"
     },
     {
-      id: 6,
+      id: 7,
       title: "Network Manager",
       company: "BoltMC",
       period: "2023 - 2024",
@@ -77,7 +68,16 @@ export default function ExperienceSection() {
       type: "past"
     },
     {
-      id: 7,
+      id: 8,
+      title: "Chief Executive Officer",
+      company: "Qloxhost, NicxoxNodes",
+      period: "2022 - 2023",
+      description: "Founded and led hosting companies providing scalable server solutions. Managed teams, developed business strategies, and ensured service quality.",
+      technologies: ["Entrepreneurship", "Management", "Hosting"],
+      type: "past"
+    },
+    {
+      id: 9,
       title: "Developer & Staff",
       company: "Various Minecraft Networks",
       period: "2020 - 2022",
