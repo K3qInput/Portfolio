@@ -126,7 +126,8 @@ export class MemStorage implements IStorage {
       id,
       createdAt: new Date(),
       image: insertBlogPost.image || null,
-      published: insertBlogPost.published || false
+      published: insertBlogPost.published || false,
+      githubUrl: insertBlogPost.githubUrl || null
     };
     this.blogPosts.set(id, blogPost);
     return blogPost;
@@ -229,4 +230,4 @@ export class DatabaseStorage implements IStorage {
   }
 }
 
-export const storage = new DatabaseStorage();
+export const storage = new MemStorage();
