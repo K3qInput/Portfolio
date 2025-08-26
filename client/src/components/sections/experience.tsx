@@ -32,6 +32,24 @@ export default function ExperienceSection() {
       type: "current"
     },
     {
+      id: 8,
+      title: "General Manager",
+      company: "Aspire SMP",
+      period: "2025",
+      description: "Leading overall network operations and strategic direction. Managing all aspects of server administration, community growth, and team coordination for optimal player experience.",
+      technologies: ["Leadership", "Strategy", "Community Management"],
+      type: "current"
+    },
+    {
+      id: 9,
+      title: "General Manager",
+      company: "Owners Alliance",
+      period: "2023 - 2025",
+      description: "Progressed through ranks from Moderator to Administrator to General Manager. Led community management initiatives, established policies, and oversaw operational excellence.",
+      technologies: ["Leadership", "Policy Development", "Team Management"],
+      type: "past"
+    },
+    {
       id: 4,
       title: "Chief Executive Officer",
       company: "Qloxhost, NicxoxNodes",
